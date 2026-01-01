@@ -1,4 +1,4 @@
-name: CI/CD Deploy to VPS with Docker
+name: CI/CD Deploy to VPS with Docker (No Docker Hub)
 
 on:
   push:
@@ -12,29 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to DockerHub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build and push image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: bgwahyoe/project-trustwe:latest
-
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
         with:
@@ -42,26 +19,15 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ~/trustwe
-            docker compose pull
-            docker compose up -d --build
-            docker image prune -f
-
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.VPS_IP }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            echo "🚀 Deploy container TrustWe"
+            echo "🚀 Deploy TrustWe tanpa Docker Hub"
 
             cd ~/trustwe
 
-            echo "📦 Pull image terbaru"
-            docker compose pull
+            echo "📥 Update source code"
+            git pull origin main
 
-            echo "🔄 Restart container"
+            echo "🐳 Build & run container"
+            docker compose build
             docker compose up -d
 
             echo "🧹 Cleanup image lama"

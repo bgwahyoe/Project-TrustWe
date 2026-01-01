@@ -1,7 +1,6 @@
-version: "3.8"
-
 services:
-  web:
-    image: bgwahyoe/project-trustwe:latest
+  app:
+    build: .
+    container_name: trustwe_app
     ports:
-      - "80:80"
+      - "3000:3000"
