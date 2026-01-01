@@ -3,4 +3,4 @@ services:
     build: .
     container_name: trustwe_app
     ports:
-      - "3000:3000"
+      - "3000:80"
