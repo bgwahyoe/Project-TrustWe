@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TrustWe - Transactions</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a227f",
+              "primary-hover": "#131a66",
+              secondary: "#2e7d32",
+              "background-light": "#f6f6f8",
+              "background-dark": "#121320",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1e1f2e",
+              "text-main": "#121217",
+              "text-muted": "#666985",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased transition-colors duration-200"
+  >
+    <div class="flex flex-col h-screen w-full overflow-hidden">
+
+  <!-- Global Navbar -->
+  <nav
+    class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div
+            class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
+          >
+            <span class="material-symbols-outlined"
+              >account_balance_wallet</span
+            >
+          </div>
+          <h2
+            class="text-primary dark:text-white text-xl font-bold tracking-tight"
+          >
+            TrustWe
+          </h2>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+          <div class="flex gap-6">
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+              href="../index.html"
+              >Home</a
+            >
+
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+              href="dashboard.html"
+              >Dashboard</a
+            >
+
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+              href="transaksi.html"
+              >Transaksi</a
+            >
+
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+              href="budgetin.html"
+              >Budgetin</a
+            >
+
+            <a
+              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+              href="report.html"
+              >Report</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden flex items-center">
+          <button
+            onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+            class="text-slate-600 dark:text-slate-300"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden flex-col gap-4 px-6 py-4 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800"
+    >
+      <a href="../index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="transaksi.html">Transaksi</a>
+      <a href="budgetin.html">Budgetin</a>
+      <a href="report.html">Report</a>
+    </div>
+  </nav>
+        </header>
+        <!-- Scrollable Content Area -->
+        <div class="flex-1 overflow-y-auto p-8">
+          <div class="max-w-6xl mx-auto flex flex-col gap-8">
+            <!-- Stats Row (Optional Context) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div
+                class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm"
+              >
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-sm font-medium text-text-muted">
+                    Total Balance
+                  </p>
+                  <span
+                    class="material-symbols-outlined text-primary dark:text-blue-400"
+                    >account_balance_wallet</span
+                  >
+                </div>
+                <p class="text-2xl font-bold text-text-main dark:text-white">
+                  $12,450.00
+                </p>
+              </div>
+              <div
+                class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm"
+              >
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-sm font-medium text-text-muted">Income</p>
+                  <span class="material-symbols-outlined text-emerald-600"
+                    >trending_up</span
+                  >
+                </div>
+                <p class="text-2xl font-bold text-emerald-600">+$4,200.00</p>
+              </div>
+              <div
+                class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm"
+              >
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-sm font-medium text-text-muted">Expenses</p>
+                  <span class="material-symbols-outlined text-red-500"
+                    >trending_down</span
+                  >
+                </div>
+                <p class="text-2xl font-bold text-red-500">-$1,850.00</p>
+              </div>
+            </div>
+            <!-- Add Transaction Form -->
+            <div
+              class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden"
+            >
+              <div
+                class="px-6 py-4 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/30 flex justify-between items-center"
+              >
+                <div>
+                  <h3 class="text-lg font-bold text-text-main dark:text-white">
+                    Add New Transaction
+                  </h3>
+                  <p class="text-sm text-text-muted">
+                    Record your income or expenses.
+                  </p>
+                </div>
+                <div class="hidden sm:block">
+                  <span
+                    class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-4xl"
+                    >edit_note</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <form class="flex flex-col gap-6">
+                  <!-- Top Row: Type Selection -->
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="text-sm font-medium text-text-main dark:text-gray-300"
+                      >Transaction Type</label
+                    >
+                    <div
+                      class="flex p-1 bg-gray-100 dark:bg-gray-800 rounded-lg w-full max-w-sm"
+                    >
+                      <label class="flex-1 cursor-pointer">
+                        <input
+                          class="sr-only peer"
+                          name="tx_type"
+                          type="radio"
+                          value="income"
+                        />
+                        <div
+                          class="text-center py-2 px-4 rounded-md text-sm font-medium text-text-muted peer-checked:bg-white dark:peer-checked:bg-gray-700 peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all"
+                        >
+                          Income
+                        </div>
+                      </label>
+                      <label class="flex-1 cursor-pointer">
+                        <input
+                          checked=""
+                          class="sr-only peer"
+                          name="tx_type"
+                          type="radio"
+                          value="expense"
+                        />
+                        <div
+                          class="text-center py-2 px-4 rounded-md text-sm font-medium text-text-muted peer-checked:bg-white dark:peer-checked:bg-gray-700 peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all"
+                        >
+                          Expense
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Middle Row: Inputs -->
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="flex flex-col gap-2">
+                      <label
+                        class="text-sm font-medium text-text-main dark:text-gray-300"
+                        >Description</label
+                      >
+                      <div class="relative">
+                        <input
+                          class="w-full h-11 pl-3 pr-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-shadow placeholder:text-gray-400 text-sm"
+                          placeholder="e.g. Grocery Shopping"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label
+                        class="text-sm font-medium text-text-main dark:text-gray-300"
+                        >Amount</label
+                      >
+                      <div class="relative">
+                        <span
+                          class="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted"
+                          >$</span
+                        >
+                        <input
+                          class="w-full h-11 pl-7 pr-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-shadow placeholder:text-gray-400 text-sm text-right"
+                          placeholder="0.00"
+                          type="number"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label
+                        class="text-sm font-medium text-text-main dark:text-gray-300"
+                        >Category</label
+                      >
+                      <div class="relative">
+                        <select
+                          class="w-full h-11 pl-3 pr-8 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-shadow text-sm appearance-none"
+                        >
+                          <option>Select Category</option>
+                          <option>Food &amp; Dining</option>
+                          <option>Transportation</option>
+                          <option>Utilities</option>
+                          <option>Entertainment</option>
+                          <option>Health</option>
+                        </select>
+                        <span
+                          class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-text-muted material-symbols-outlined text-[20px]"
+                          >expand_more</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Bottom Row: Action -->
+                  <div class="flex justify-end pt-2">
+                    <button
+                      class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-lg font-medium text-sm transition-colors shadow-sm shadow-primary/30 flex items-center gap-2"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >add</span
+                      >
+                      Add Transaction
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Transactions Table -->
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold text-text-main dark:text-white">
+                  Recent Transactions
+                </h3>
+                <div class="relative">
+                  <input
+                    class="h-9 pl-9 pr-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm focus:border-primary focus:ring-0 w-64"
+                    placeholder="Search..."
+                    type="text"
+                  />
+                  <span
+                    class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400 text-[18px]"
+                    >search</span
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden"
+              >
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left border-collapse">
+                    <thead>
+                      <tr
+                        class="bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800 text-xs uppercase tracking-wider text-text-muted font-semibold"
+                      >
+                        <th class="px-6 py-4">Date</th>
+                        <th class="px-6 py-4">Transaction Name</th>
+                        <th class="px-6 py-4">Category</th>
+                        <th class="px-6 py-4">Status</th>
+                        <th class="px-6 py-4 text-right">Amount</th>
+                        <th class="px-6 py-4 text-center">Action</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody
+                      class="divide-y divide-gray-100 dark:divide-gray-800"
+                    >
+                      <!-- Row 1 -->
+                      <tr
+                        class="group hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                      >
+                        <td
+                          class="px-6 py-4 text-sm text-text-muted whitespace-nowrap"
+                        >
+                          Oct 24, 2023
+                        </td>
+                        <td class="px-6 py-4">
+                          <div class="flex items-center gap-3">
+                            <div
+                              class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center"
+                            >
+                              <span
+                                class="material-symbols-outlined text-[18px]"
+                                >shopping_cart</span
+                              >
+                            </div>
+                            <p
+                              class="text-sm font-medium text-text-main dark:text-white"
+                            >
+                              Whole Foods Market
+                            </p>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-text-muted">
+                          Food &amp; Dining
+                        </td>
+                        <td class="px-6 py-4">
+                          <span
+                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+                          >
+                            Expense
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 text-sm font-semibold text-text-main dark:text-white text-right"
+                        >
+                          -$142.50
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                          <button
+                            class="text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
+                          >
+                            <span class="material-symbols-outlined text-[20px]"
+                              >more_vert</span
+                            >
+                          </button>
+                        </td>
+                      </tr>
+                      <!-- Row 2 -->
+                      <tr
+                        class="group hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                      >
+                        <td
+                          class="px-6 py-4 text-sm text-text-muted whitespace-nowrap"
+                        >
+                          Oct 23, 2023
+                        </td>
+                        <td class="px-6 py-4">
+                          <div class="flex items-center gap-3">
+                            <div
+                              class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400 flex items-center justify-center"
+                            >
+                              <span
+                                class="material-symbols-outlined text-[18px]"
+                                >payments</span
+                              >
+                            </div>
+                            <p
+                              class="text-sm font-medium text-text-main dark:text-white"
+                            >
+                              Freelance Payment
+                            </p>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-text-muted">
+                          Income
+                        </td>
+                        <td class="px-6 py-4">
+                          <span
+                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300"
+                          >
+                            Completed
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 text-sm font-semibold text-emerald-600 text-right"
+                        >
+                          +$1,250.00
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                          <button
+                            class="text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
+                          >
+                            <span class="material-symbols-outlined text-[20px]"
+                              >more_vert</span
+                            >
+                          </button>
+                        </td>
+                      </tr>
+                      <!-- Row 3 -->
+                      <tr
+                        class="group hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                      >
+                        <td
+                          class="px-6 py-4 text-sm text-text-muted whitespace-nowrap"
+                        >
+                          Oct 21, 2023
+                        </td>
+                        <td class="px-6 py-4">
+                          <div class="flex items-center gap-3">
+                            <div
+                              class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400 flex items-center justify-center"
+                            >
+                              <span
+                                class="material-symbols-outlined text-[18px]"
+                                >movie</span
+                              >
+                            </div>
+                            <p
+                              class="text-sm font-medium text-text-main dark:text-white"
+                            >
+                              Netflix Subscription
+                            </p>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-text-muted">
+                          Entertainment
+                        </td>
+                        <td class="px-6 py-4">
+                          <span
+                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+                          >
+                            Recurring
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 text-sm font-semibold text-text-main dark:text-white text-right"
+                        >
+                          -$15.99
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                          <button
+                            class="text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
+                          >
+                            <span class="material-symbols-outlined text-[20px]"
+                              >more_vert</span
+                            >
+                          </button>
+                        </td>
+                      </tr>
+                      <!-- Row 4 -->
+                      <tr
+                        class="group hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                      >
+                        <td
+                          class="px-6 py-4 text-sm text-text-muted whitespace-nowrap"
+                        >
+                          Oct 20, 2023
+                        </td>
+                        <td class="px-6 py-4">
+                          <div class="flex items-center gap-3">
+                            <div
+                              class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 flex items-center justify-center"
+                            >
+                              <span
+                                class="material-symbols-outlined text-[18px]"
+                                >local_gas_station</span
+                              >
+                            </div>
+                            <p
+                              class="text-sm font-medium text-text-main dark:text-white"
+                            >
+                              Shell Station
+                            </p>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-text-muted">
+                          Transportation
+                        </td>
+                        <td class="px-6 py-4">
+                          <span
+                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+                          >
+                            Expense
+                          </span>
+                        </td>
+                        <td
+                          class="px-6 py-4 text-sm font-semibold text-text-main dark:text-white text-right"
+                        >
+                          -$45.00
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                          <button
+                            class="text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
+                          >
+                            <span class="material-symbols-outlined text-[20px]"
+                              >more_vert</span
+                            >
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Pagination -->
+                <div
+                  class="flex items-center justify-between px-6 py-4 border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/30"
+                >
+                  <p class="text-xs text-text-muted">
+                    Showing
+                    <span class="font-medium text-text-main dark:text-white"
+                      >1-4</span
+                    >
+                    of
+                    <span class="font-medium text-text-main dark:text-white"
+                      >24</span
+                    >
+                    transactions
+                  </p>
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="p-1 rounded-md text-gray-400 hover:text-primary disabled:opacity-50 hover:bg-white dark:hover:bg-gray-700 transition-all border border-transparent hover:border-gray-200 dark:hover:border-gray-600 disabled:cursor-not-allowed"
+                      disabled=""
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >chevron_left</span
+                      >
+                    </button>
+                    <button
+                      class="p-1 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary disabled:opacity-50 hover:bg-white dark:hover:bg-gray-700 transition-all border border-transparent hover:border-gray-200 dark:hover:border-gray-600"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >chevron_right</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="../assets/app.js"></script>
+  <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+</html>

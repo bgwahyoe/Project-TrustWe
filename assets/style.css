@@ -1,0 +1,9 @@
+.active {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.dark {
+  background-color: #111;
+  color: white;
+}
