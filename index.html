@@ -50,6 +50,7 @@
         },
       };
     </script>
+    
   </head>
   <body
     class="font-display bg-background-light dark:bg-background-dark text-slate-heading antialiased overflow-x-hidden"
@@ -109,16 +110,23 @@
                   href="pages/report.html"
                   >Report</a
                 >
+                <a
+                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="pages/team.html"
+                  >Our Team</a
+                >
               </div>
             </div>
 
             <!-- Mobile Menu Icon -->
             <div class="md:hidden flex items-center">
               <button
-                onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
-                class="text-slate-600 dark:text-slate-300"
+                id="hamburgerBtn"
+                class="relative z-50 flex flex-col gap-1.5 p-2"
               >
-                <span class="material-symbols-outlined">menu</span>
+                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
+                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
+                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
               </button>
             </div>
           </div>
@@ -127,13 +135,17 @@
         <!-- Mobile Menu -->
         <div
           id="mobileMenu"
-          class="hidden md:hidden flex-col gap-4 px-6 py-4 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800"
+          class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
+                opacity-0 scale-95 pointer-events-none transition-all duration-200"
         >
-          <a href="../index.html">Home</a>
-          <a href="pages/dashboard.html">Dashboard</a>
-          <a href="pages/transaksi.html">Transaksi</a>
-          <a href="pages/budgetin.html">Budgetin</a>
-          <a href="pages/report.html">Report</a>
+          <div class="flex flex-col gap-2 p-4">
+            <a class="mobile-link" href="../index.html">Home</a>
+            <a class="mobile-link" href="pages/dashboard.html">Dashboard</a>
+            <a class="mobile-link" href="pages/transaksi.html">Transaksi</a>
+            <a class="mobile-link" href="pages/budgetin.html">Budgetin</a>
+            <a class="mobile-link" href="pages/report.html">Report</a>
+            <a class="mobile-link" href="pages/team.html">Our Team</a>
+          </div>
         </div>
       </nav>
 
@@ -455,6 +467,26 @@
       </footer>
     </div>
   </body>
+    <script>
+    const hamburger = document.getElementById("hamburgerBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("opacity-0");
+      mobileMenu.classList.toggle("scale-95");
+      mobileMenu.classList.toggle("pointer-events-none");
+
+      hamburger.classList.toggle("active");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+      }
+    });
+  </script>
+
   <script src="../assets/app.js"></script>
   <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
 </html>
