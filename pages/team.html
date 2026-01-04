@@ -6,6 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>TrustWe Team Introduction</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='36' rx='6' fill='%230F766E'/%3E%3Crect x='10' y='18' width='44' height='28' rx='4' fill='%2314B8A6'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%230F766E'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-size='14' fill='white' font-weight='700'%3E%24%3C/text%3E%3C/svg%3E" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
         rel="stylesheet" />
@@ -58,262 +60,340 @@
 
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200">
     <div class="flex flex-col min-h-screen">
-        <nav
-        class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50"
-      >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
-              <div
-                class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
-              >
-                <span class="material-symbols-outlined"
-                  >account_balance_wallet</span
-                >
-              </div>
-              <h2
-                class="text-primary dark:text-white text-xl font-bold tracking-tight"
-              href="../index.html">
-                TrustWe
-              </h2>
+        <nav class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <a href="../index.html" class="flex items-center gap-2">
+                        <div class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">
+                                account_balance_wallet
+                            </span>
+                        </div>
+                        <h2 class="text-primary dark:text-white text-xl font-bold tracking-tight">
+                            TrustWe
+                        </h2>
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+                        <div class="flex gap-6">
+                            <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                                href="../index.html">
+                                Beranda
+                            </a>
+
+                            <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                                href="dashboard.html">
+                                Dashboard
+                            </a>
+
+                            <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                                href="transaksi.html">
+                                Transaksi
+                            </a>
+
+                            <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                                href="budgetin.html">
+                                Anggaran
+                            </a>
+
+                            <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                                href="report.html">
+                                Laporan
+                            </a>
+
+                            <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                                href="team.html">
+                                Tim Kami
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Icon -->
+                    <div class="md:hidden flex items-center">
+                        <button id="hamburgerBtn" class="relative z-50 flex flex-col gap-1.5 p-2">
+                            <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
+                            <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
+                            <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex flex-1 justify-end items-center gap-8">
-              <div class="flex gap-6">
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="../index.html"
-                  >Home</a
-                >
-
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="dashboard.html"
-                  >Dashboard</a
-                >
-
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="transaksi.html"
-                  >Transaksi</a
-                >
-
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="budgetin.html"
-                  >Budgetin</a
-                >
-
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="report.html"
-                  >Report</a
-                >
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="team.html"
-                  >Our Team</a
-                >
-              </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
+           opacity-0 scale-95 pointer-events-none transition-all duration-200">
+                <div class="flex flex-col gap-2 p-4">
+                    <a class="mobile-link" href="../index.html">Beranda</a>
+                    <a class="mobile-link" href="dashboard.html">Dashboard</a>
+                    <a class="mobile-link" href="transaksi.html">Transaksi</a>
+                    <a class="mobile-link" href="budgetin.html">Anggaran</a>
+                    <a class="mobile-link" href="report.html">Laporan</a>
+                    <a class="mobile-link" href="team.html">Tim Kami</a>
+                </div>
             </div>
+        </nav>
 
-            <!-- Mobile Menu Icon -->
-            <div class="md:hidden flex items-center">
-              <button
-                id="hamburgerBtn"
-                class="relative z-50 flex flex-col gap-1.5 p-2"
-              >
-                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
-                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
-                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div
-          id="mobileMenu"
-          class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
-                opacity-0 scale-95 pointer-events-none transition-all duration-200"
-        >
-          <div class="flex flex-col gap-2 p-4">
-            <a class="mobile-link" href="../index.html">Home</a>
-            <a class="mobile-link" href="dashboard.html">Dashboard</a>
-            <a class="mobile-link" href="transaksi.html">Transaksi</a>
-            <a class="mobile-link" href="budgetin.html">Budgetin</a>
-            <a class="mobile-link" href="report.html">Report</a>
-            <a class="mobile-link" href="team.html">Our Team</a>
-          </div>
-        </div>
-      </nav>
         <main class="flex-grow">
             <section class="relative bg-primary py-20 lg:py-28 overflow-hidden">
                 <div class="absolute inset-0 z-0">
                     <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/80 z-10"></div>
-                    <img alt="Team collaborating in a modern office meeting" class="w-full h-full object-cover"
-                        data-alt="Diverse team working together in office"
+                    <img alt="Tim berkolaborasi di kantor modern" class="w-full h-full object-cover"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDhfF5fRjIqnyzRqoPmj-S8Bnlk-GaP6ZMj4NPI3XbQPUF3cFZ1bvZ_EwDr6NC2CeISolcTQgKTp4a1RhIBVTSsqQDbMVxZ2WKJvrY-B81dkMI5Rk9BI3vtL-6w1ZfFL2w44eFvf_8vca95HGfHZJ4wOkWAFKYW7WlxCVQQfHEiMVLzWymiHe1RMuzEamm2q0TK-tFzgDNFAQIEf6MFgC8MXso3BSkaVcUA1lK7z8Stdel3ALe5qEJVQfWO4o9vvceScH9qLatF_8" />
                 </div>
+
                 <div class="relative z-10 max-w-[960px] mx-auto px-6 text-center">
                     <h1
                         class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-6">
-                        Meet the Experts Behind TrustWe
+                        Kenali Tim Profesional di Balik TrustWe
                     </h1>
+
                     <p class="text-blue-100 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
-                        We are a team of financial analysts, engineers, and visionaries dedicated to securing your
-                        future through intelligent technology.
+                        Kami adalah tim analis keuangan, engineer, dan visioner yang berdedikasi
+                        untuk mengamankan masa depan finansial Anda melalui teknologi cerdas.
                     </p>
+
                     <button
                         class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-accent text-white hover:bg-emerald-600 text-base font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         <span class="material-symbols-outlined mr-2">rocket_launch</span>
-                        Learn More About Our Mission
+                        Pelajari Misi Kami Lebih Lanjut
                     </button>
                 </div>
             </section>
+
+
             <section class="max-w-[1200px] mx-auto px-6 py-16 lg:py-24">
+                <!-- Header -->
                 <div class="text-center mb-16">
-                    <span class="text-accent font-bold tracking-wider uppercase text-sm">Our People</span>
-                    <h2 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-bold mt-2">The TrustWe Team</h2>
+                    <span class="text-accent font-bold tracking-wider uppercase text-sm">Tim Kami</span>
+                    <h2 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-bold mt-2">
+                        Tim TrustWe
+                    </h2>
                     <p class="text-secondary dark:text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
-                        Bringing together decades of experience in fintech, cybersecurity, and product design to build
-                        the future of financial management.
+                        Menggabungkan puluhan tahun pengalaman di bidang fintech, keamanan siber, dan desain produk
+                        untuk membangun masa depan manajemen keuangan.
                     </p>
                 </div>
+
+                <!-- Card Wrapper -->
                 <div class="flex flex-wrap justify-center gap-8">
+
+                    <!-- Card 1 -->
                     <div
                         class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center text-center border border-gray-100 dark:border-gray-800 w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[360px]">
                         <div class="w-36 h-36 rounded-full mb-6 bg-cover bg-center ring-4 ring-gray-50 dark:ring-gray-700 shadow-inner"
-                            data-alt="Portrait of Sarah Jenkins CEO"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNbrY53K5dw4bN7INxfEVtzAnztYerDY2aLfUqV-0772rTikdhfZuHI2kn9exUTO59O4EZtq5oxBrlYZc-23Fb1Tso8xuudop2h5vXeVvB5DwCOpSB_w4OmmFpGyHRnsXXTaY598EZ4TOE5QxrWgvL4lWz346rxG7sc9UM_8Ck-aXJO8QmhKsPgcAiWWUJ8wKc0gCQe0OkDw9Tj_GXJ-n0HwZNRVTtlgW4u3lebGnUubhLChhJNK_P_V6JYWz7MLNWwLPV8XkL8oY');">
+                            style="background-image:url('../img/wahyu.jpeg');">
                         </div>
-                        <h3 class="text-slate-900 dark:text-white text-xl font-bold">Wahyu Ahmad Yassin</h3>
-                        <p class="text-accent font-bold text-sm mb-4 uppercase tracking-wide">Chief Executive Officer
-                        </p>
-                        <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed mb-6">
-                            Former VP at Major Bank with 15 years of fintech leadership experience.
+                        <h3 class="text-xl font-bold">Wahyu Ahmad Yassin</h3>
+                        <p class="text-accent font-bold text-sm mb-4 uppercase">DevOps Lead</p>
+                        <p class="text-secondary dark:text-gray-400 text-sm mb-6">
+                            Memimpin strategi DevOps, CI/CD, dan automasi infrastruktur berbasis cloud.
                         </p>
                         <div class="mt-auto flex gap-4">
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">public</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">mail</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">share</span></a>
+                            <a href="https://www.linkedin.com/in/wahyuahmadyassin"
+                                class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">dns</span>
+                            </a>
+                            <a href="https://wa.me/62895604849987?text=Halo,%20saya%20ingin%20bertanya%20terkait%20manajemen%20Keuangan"
+                                target="_blank" class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">chat</span>
+                            </a>
+
                         </div>
                     </div>
+
+                    <!-- Card 2 -->
                     <div
                         class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center text-center border border-gray-100 dark:border-gray-800 w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[360px]">
                         <div class="w-36 h-36 rounded-full mb-6 bg-cover bg-center ring-4 ring-gray-50 dark:ring-gray-700 shadow-inner"
-                            data-alt="Portrait of David Chen CTO"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8pZxSfdzEfHglbO9B1xR-ff6k499OmqLXQhKSQfrdOFjQ5CcVZZzGcLaAZXDLmsThRpqnv2LBGLlVI5ELt-Zj8QMP5x_rYsYpLnk1KL3rJXqsN2uwN6jQ5jLYLp0H3oKWGDotx3Aaz-AZ20FGnYdsRQOvJswJXLYRy4U4bUHV_6D52c_LjT1oSaW1LJem-0JwU4kxDfhj_ATb_7HWFnEM5lY8xSYfUbAPB8JBkI6SdCgyZ_V8M2AKgMeUtsYnMT62-vOsMn8cPiU');">
+                            style="background-image:url('../img/sulton.jpg');">
                         </div>
-                        <h3 class="text-slate-900 dark:text-white text-xl font-bold">David Chen</h3>
-                        <p class="text-accent font-bold text-sm mb-4 uppercase tracking-wide">Chief Technology Officer
-                        </p>
-                        <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed mb-6">
-                            Cybersecurity expert focused on blockchain and secure infrastructure.
+                        <h3 class="text-xl font-bold">Ahmad Sulthon</h3>
+                        <p class="text-accent font-bold text-sm mb-4 uppercase">Cloud Infrastructure Engineer</p>
+                        <p class="text-secondary dark:text-gray-400 text-sm mb-6">
+                            Mengelola server cloud, network, dan skalabilitas sistem produksi.
                         </p>
                         <div class="mt-auto flex gap-4">
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">public</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">mail</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">share</span></a>
+                            <a href="https://www.linkedin.com/in/ahmad-sulthon-7215732b4"
+                                class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">cloud</span>
+                            </a>
+                            <a href="https://wa.me/628159689844" class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">chat</span>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Card 3 -->
                     <div
                         class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center text-center border border-gray-100 dark:border-gray-800 w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[360px]">
                         <div class="w-36 h-36 rounded-full mb-6 bg-cover bg-center ring-4 ring-gray-50 dark:ring-gray-700 shadow-inner"
-                            data-alt="Portrait of Elena Rodriguez Head of Product"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsh3sVvauOLEQOdZvN9o2mMINb3FCW0MOVBu16yEz4zd808gTFjmznAd1z2PVkP-153dMckczArAOsBmv_YzFRIkTRwJyPNfV1kiC2MYnAkt37osOAAC9Qc1rpWhu3nHuFzyZ6OZWHMuFy3HsJcmtBm4dIKU76BL2oyofWubxWxDuh2g3_rFV4TF17RRVcRN2DKbEN-BNnYKtdggO8FiyXir7iKp7AfNnDxzRGzm1Y6LoFf6KRrYoZKGO8t6xaT6g_ywMByRFFLSs');">
+                            style="background-image:url('../img/aby.jpg');">
                         </div>
-                        <h3 class="text-slate-900 dark:text-white text-xl font-bold">Elena Rodriguez</h3>
-                        <p class="text-accent font-bold text-sm mb-4 uppercase tracking-wide">Head of Product</p>
-                        <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed mb-6">
-                            Product visionary behind several award-winning finance applications.
+                        <h3 class="text-xl font-bold">Aby Sofyan Hanafi</h3>
+                        <p class="text-accent font-bold text-sm mb-4 uppercase">CI/CD Engineer</p>
+                        <p class="text-secondary dark:text-gray-400 text-sm mb-6">
+                            Merancang pipeline CI/CD untuk deployment otomatis dan minim error.
                         </p>
                         <div class="mt-auto flex gap-4">
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">public</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">mail</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">share</span></a>
+                            <a href="https://www.linkedin.com/in/aby-sofyan-hanafi-38364832b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">sync</span>
+                            </a>
+                            <a href="https://wa.me/6281223482524" class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">chat</span>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Card 4 -->
                     <div
                         class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center text-center border border-gray-100 dark:border-gray-800 w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[360px]">
                         <div class="w-36 h-36 rounded-full mb-6 bg-cover bg-center ring-4 ring-gray-50 dark:ring-gray-700 shadow-inner"
-                            data-alt="Portrait of Michael Ross CFO"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCshhTGnfg51fmJ5-NN4KesY-1WsetK6eyRHuHRJdYaN7DW1ZIDwhgL26n234-sNzfMZDFSj2eDbUHM1EvKrGMhGYRHFvjP3YUreDI15aH0OfxBRAUrRFnSVXgU1fKrWEyNsRyIwUvKY_H3KE8v0mIuFoACVj-cpeNz4snruYWgVs4aAjmJKWoplniz8hMXd2V_Rd_I3DHe7z-xt-97a1f07BBzNv-xZRNkd6aTNSmyDEOKs1XlFZMdV_qaKjro9DrrAsqv5CKWTUA');">
+                            style="background-image:url('../img/eshi.JPG');">
                         </div>
-                        <h3 class="text-slate-900 dark:text-white text-xl font-bold">Michael Ross</h3>
-                        <p class="text-accent font-bold text-sm mb-4 uppercase tracking-wide">Chief Financial Officer
-                        </p>
-                        <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed mb-6">
-                            CPA with 20 years of asset management and compliance experience.
+                        <h3 class="text-xl font-bold">Eshi Aulia</h3>
+                        <p class="text-accent font-bold text-sm mb-4 uppercase">Site Reliability Engineer</p>
+                        <p class="text-secondary dark:text-gray-400 text-sm mb-6">
+                            Menjaga keandalan sistem, monitoring, dan penanganan insiden produksi.
                         </p>
                         <div class="mt-auto flex gap-4">
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">public</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">mail</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">share</span></a>
+                            <a href="https://www.linkedin.com/in/eshi-aulia-29293032b"
+                                class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">monitoring</span>
+                            </a>
+                            <a href="https://wa.me/6282182420030" class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">chat</span>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Card 5 -->
                     <div
                         class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center text-center border border-gray-100 dark:border-gray-800 w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[360px]">
                         <div class="w-36 h-36 rounded-full mb-6 bg-cover bg-center ring-4 ring-gray-50 dark:ring-gray-700 shadow-inner"
-                            data-alt="Anita Patel Frontend Developer"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCM2wfwpqlw6CzJFKDpJ3VIcl7mrCJSmv5M4xUDccdiP0PnwxOkL0UNWiRtWtCgtrISrNVSIRr99uvq70_0xtCZnEExKfUHmcHTy4UrkHk3MQ39rlnbWQVejUMFcGkHV7P0StbIft_EBtiLXxLc6XbJeaPyQNSUtRt_nZNJ_qRorWDIIMNJfOxZHlJjEDKbVajVGrR7uJEAyqyfALYs8vndcBGs-rF61J9k6019gTBc0F7v7g6ylpq6DCU_3LtOqap084PV-srwo4M');">
+                            style="background-image:url('../img/dinta.JPG');">
                         </div>
-                        <h3 class="text-slate-900 dark:text-white text-xl font-bold">Anita Patel</h3>
-                        <p class="text-accent font-bold text-sm mb-4 uppercase tracking-wide">Senior UI/UX Designer</p>
-                        <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed mb-6">
-                            Crafting pixel-perfect and accessible user interfaces for all users.
+                        <h3 class="text-xl font-bold">Dinta Fridayanti</h3>
+                        <p class="text-accent font-bold text-sm mb-4 uppercase">DevSecOps Engineer</p>
+                        <p class="text-secondary dark:text-gray-400 text-sm mb-6">
+                            Mengintegrasikan keamanan ke dalam pipeline dan infrastruktur DevOps.
                         </p>
                         <div class="mt-auto flex gap-4">
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">public</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">mail</span></a>
-                            <a class="text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-                                href="#"><span class="material-symbols-outlined">share</span></a>
+                            <a href="https://www.linkedin.com/in/dinta-fridayanti-3328a82b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">security</span>
+                            </a>
+                            <a href="https://wa.me/6281574924968" class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">chat</span>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center text-center border border-gray-100 dark:border-gray-800 w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[360px]">
+                        <div class="w-36 h-36 rounded-full mb-6 bg-cover bg-center ring-4 ring-gray-50 dark:ring-gray-700 shadow-inner"
+                            style="background-image:url('../img/ulul.JPG');">
+                        </div>
+                        <h3 class="text-xl font-bold">Muhamad Uulul Azmi</h3>
+                        <p class="text-accent font-bold text-sm mb-4 uppercase">Automation Engineer</p>
+                        <p class="text-secondary dark:text-gray-400 text-sm mb-6">
+                            Mengembangkan automasi deployment, konfigurasi, dan manajemen server.
+                        </p>
+                        <div class="mt-auto flex gap-4">
+                            <a href="https://id.linkedin.com/in/muhamad-uulul-azmi-413580391"
+                                class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">settings</span>
+                            </a>
+                            <a href="https://wa.me/6288292189773" class="text-gray-400 hover:text-primary">
+                                <span class="material-symbols-outlined">chat</span>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
+
             </section>
-            <section class="bg-primary dark:bg-surface-dark py-20 px-6">
+
+
+            <section class="bg-primary dark:bg-surface-dark py-14 sm:py-20 px-4 sm:px-6">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-white text-3xl font-bold mb-4">Want to help us shape the financial world?</h2>
-                    <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">We are always looking for talented
-                        individuals to join our team. Explore our open positions and find your next challenge.</p>
+                    <h2 class="text-white text-2xl sm:text-3xl font-bold mb-4 leading-snug">
+                        Ingin membantu kami membentuk dunia keuangan?
+                    </h2>
+
+                    <p class="text-blue-100 text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+                        Kami selalu mencari individu berbakat untuk bergabung bersama tim kami.
+                        Jelajahi posisi yang tersedia dan temukan tantangan berikutnya untuk karier Anda.
+                    </p>
+
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button
-                            class="flex items-center justify-center px-8 py-3 bg-accent hover:bg-emerald-600 text-white font-bold rounded-lg transition-colors">
-                            View Open Positions
-                        </button>
-                        <button
-                            class="flex items-center justify-center px-8 py-3 bg-transparent border border-white text-white hover:bg-white/10 font-bold rounded-lg transition-colors">
-                            Contact HR
-                        </button>
+                        <a href="https://wa.me/62895604849987" class="w-full sm:w-auto">
+                            <button class="w-full sm:w-auto flex items-center justify-center px-6 sm:px-8 py-3
+                           bg-transparent border border-white text-white
+                           hover:bg-white/10 font-bold rounded-lg transition-colors">
+                                Hubungi HR
+                            </button>
+                        </a>
                     </div>
                 </div>
             </section>
+
+
+
         </main>
-        <footer class="bg-surface-light dark:bg-black py-8 border-t border-gray-200 dark:border-gray-800">
-            <div class="max-w-[1280px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-secondary dark:text-gray-500 text-sm">© 2023 TrustWe Financial. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <a class="text-secondary dark:text-gray-500 hover:text-primary dark:hover:text-white text-sm"
-                        href="#">Privacy Policy</a>
-                    <a class="text-secondary dark:text-gray-500 hover:text-primary dark:hover:text-white text-sm"
-                        href="#">Terms of Service</a>
+        <!-- Footer -->
+        <footer class="w-full bg-slate-50 dark:bg-slate-950 border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <!-- Brand -->
+                    <div class="flex items-center gap-2">
+                        <div class="size-6 text-slate-400">
+                            <span class="material-symbols-outlined">
+                                account_balance_wallet
+                            </span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-lg font-bold">
+                            TrustWe
+                        </span>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <a class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                            href="#">
+                            Kebijakan Privasi
+                        </a>
+                        <a class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                            href="#">
+                            Syarat & Ketentuan
+                        </a>
+                        <a class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                            href="#">
+                            Bantuan
+                        </a>
+                    </div>
+
+                    <!-- Socials -->
+                    <div class="flex gap-4">
+                        <a class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">share</span>
+                        </a>
+                        <a class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">work</span>
+                        </a>
+                        <a class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">groups</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 dark:border-gray-800 pt-8 text-center">
+                    <p class="text-slate-400 text-sm">
+                        © 2024 TrustWe. Seluruh hak cipta dilindungi. Kelompok P. Alhamdulillah.
+                    </p>
                 </div>
             </div>
         </footer>
@@ -325,19 +405,19 @@
     const mobileMenu = document.getElementById("mobileMenu");
 
     hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("opacity-0");
-      mobileMenu.classList.toggle("scale-95");
-      mobileMenu.classList.toggle("pointer-events-none");
+        mobileMenu.classList.toggle("opacity-0");
+        mobileMenu.classList.toggle("scale-95");
+        mobileMenu.classList.toggle("pointer-events-none");
 
-      hamburger.classList.toggle("active");
+        hamburger.classList.toggle("active");
     });
 
     // Close menu when clicking outside
     document.addEventListener("click", (e) => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
-      }
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+        }
     });
-  </script>
+</script>
 
 </html>

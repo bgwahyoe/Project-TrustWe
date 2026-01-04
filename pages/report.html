@@ -1,131 +1,113 @@
 <!DOCTYPE html>
 
 <html class="light" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>TrustWe Reports</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='36' rx='6' fill='%230F766E'/%3E%3Crect x='10' y='18' width='44' height='28' rx='4' fill='%2314B8A6'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%230F766E'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-size='14' fill='white' font-weight='700'%3E%24%3C/text%3E%3C/svg%3E"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#1a227f",
-              secondary: "#64748b",
-              success: "#10b981",
-              "background-light": "#f6f6f8",
-              "background-dark": "#121320",
-              "surface-light": "#ffffff",
-              "surface-dark": "#1e2030",
-            },
-            fontFamily: {
-              display: ["Inter", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              full: "9999px",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>TrustWe Reports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='36' rx='6' fill='%230F766E'/%3E%3Crect x='10' y='18' width='44' height='28' rx='4' fill='%2314B8A6'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%230F766E'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-size='14' fill='white' font-weight='700'%3E%24%3C/text%3E%3C/svg%3E" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1a227f",
+            secondary: "#64748b",
+            success: "#10b981",
+            "background-light": "#f6f6f8",
+            "background-dark": "#121320",
+            "surface-light": "#ffffff",
+            "surface-dark": "#1e2030",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
           },
         },
-      };
-    </script>
-  </head>
-  <body
-    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-hidden"
-  >
-    <div class="flex h-screen w-full">
-<div class="flex flex-col h-screen w-full overflow-hidden">
+      },
+    };
+  </script>
+</head>
 
-  <!-- Global Navbar (copied from index.html) -->
-  <nav
-    class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50"
-  >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-          <div
-            class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
-          >
-            <span class="material-symbols-outlined"
-              >account_balance_wallet</span
-            >
-          </div>
-          <h2
-            class="text-primary dark:text-white text-xl font-bold tracking-tight"
-          href="../index.html">
-            TrustWe
-          </h2>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-hidden">
+  <div class="flex h-screen w-full">
+    <div class="flex flex-col h-screen w-full overflow-hidden">
+
+      <!-- Global Navbar (copied from index.html) -->
+      <nav class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center gap-2">
+        <div
+          class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
+        >
+          <span class="material-symbols-outlined">
+            account_balance_wallet
+          </span>
         </div>
+        <h2
+          class="text-primary dark:text-white text-xl font-bold tracking-tight"
+        >
+          TrustWe
+        </h2>
+      </a>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex flex-1 justify-end items-center gap-8">
-          <div class="flex gap-6">
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="../index.html"
-              >Home</a
-            >
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+              <div class="flex gap-6">
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="../index.html">
+                  Beranda
+                </a>
 
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="dashboard.html"
-              >Dashboard</a
-            >
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="dashboard.html">
+                  Dasbor
+                </a>
 
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="transaksi.html"
-              >Transaksi</a
-            >
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="transaksi.html">
+                  Transaksi
+                </a>
 
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="budgetin.html"
-              >Budgetin</a
-            >
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="budgetin.html">
+                  Anggaran
+                </a>
 
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="report.html"
-              >Report</a
-            >
-            
-            <a
-                class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                href="team.html"
-                >Our Team</a
-            >
-          </div>
-        </div>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="report.html">
+                  Laporan
+                </a>
 
-        <!-- Mobile Menu Icon -->
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="team.html">
+                  Tim Kami
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Menu Icon -->
             <div class="md:hidden flex items-center">
-              <button
-                id="hamburgerBtn"
-                class="relative z-50 flex flex-col gap-1.5 p-2"
-              >
+              <button id="hamburgerBtn" class="relative z-50 flex flex-col gap-1.5 p-2">
                 <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
                 <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
                 <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
@@ -135,631 +117,450 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div
-          id="mobileMenu"
-          class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
-                opacity-0 scale-95 pointer-events-none transition-all duration-200"
-        >
+        <div id="mobileMenu" class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
+           opacity-0 scale-95 pointer-events-none transition-all duration-200">
           <div class="flex flex-col gap-2 p-4">
-            <a class="mobile-link" href="../index.html">Home</a>
-            <a class="mobile-link" href="dashboard.html">Dashboard</a>
+            <a class="mobile-link" href="../index.html">Beranda</a>
+            <a class="mobile-link" href="dashboard.html">Dasbor</a>
             <a class="mobile-link" href="transaksi.html">Transaksi</a>
-            <a class="mobile-link" href="budgetin.html">Budgetin</a>
-            <a class="mobile-link" href="report.html">Report</a>
+            <a class="mobile-link" href="budgetin.html">Anggaran</a>
+            <a class="mobile-link" href="report.html">Laporan</a>
+            <a class="mobile-link" href="team.html">Tim Kami</a>
           </div>
         </div>
-  </nav>
+      </nav>
 
-  <!-- Main Content -->
-  <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+      <!-- Main Content -->
+      <main class="flex-1 flex flex-col h-full overflow-hidden relative">
 
         <!-- Scrollable Content Area -->
-        <main
-          class="flex-1 overflow-y-auto p-4 md:p-8 bg-background-light dark:bg-background-dark"
-        >
+        <main class="flex-1 overflow-y-auto p-4 md:p-8 bg-background-light dark:bg-background-dark">
           <div class="max-w-7xl mx-auto flex flex-col gap-6">
             <!-- Stats Section -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- Total Pemasukan -->
               <div
-                class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-1 relative overflow-hidden group"
-              >
-                <div
-                  class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
-                >
-                  <span class="material-symbols-outlined text-6xl text-primary"
-                    >payments</span
-                  >
+                class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-1 relative overflow-hidden group">
+                <div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <span class="material-symbols-outlined text-6xl text-primary">payments</span>
                 </div>
-                <span
-                  class="text-sm font-medium text-slate-500 dark:text-slate-400"
-                  >Total Income</span
-                >
+                <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Pemasukan</span>
                 <div class="flex items-end gap-3 mt-1">
+                  <span class="text-2xl font-bold text-slate-900 dark:text-white">Rp12.450.000</span>
                   <span
-                    class="text-2xl font-bold text-slate-900 dark:text-white"
-                    >$12,450.00</span
-                  >
-                  <span
-                    class="flex items-center text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-full"
-                  >
-                    <span class="material-symbols-outlined text-[14px] mr-1"
-                      >trending_up</span
-                    >
+                    class="flex items-center text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-full">
+                    <span class="material-symbols-outlined text-[14px] mr-1">trending_up</span>
                     +12%
                   </span>
                 </div>
-                <span class="text-xs text-slate-400 mt-2">vs last month</span>
+                <span class="text-xs text-slate-400 mt-2">dibanding bulan lalu</span>
               </div>
+
+              <!-- Total Pengeluaran -->
               <div
-                class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-1 relative overflow-hidden group"
-              >
-                <div
-                  class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
-                >
-                  <span class="material-symbols-outlined text-6xl text-red-500"
-                    >credit_card</span
-                  >
+                class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-1 relative overflow-hidden group">
+                <div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <span class="material-symbols-outlined text-6xl text-red-500">credit_card</span>
                 </div>
-                <span
-                  class="text-sm font-medium text-slate-500 dark:text-slate-400"
-                  >Total Expenses</span
-                >
+                <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Pengeluaran</span>
                 <div class="flex items-end gap-3 mt-1">
+                  <span class="text-2xl font-bold text-slate-900 dark:text-white">Rp8.320.500</span>
                   <span
-                    class="text-2xl font-bold text-slate-900 dark:text-white"
-                    >$8,320.50</span
-                  >
-                  <span
-                    class="flex items-center text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-full"
-                  >
-                    <span class="material-symbols-outlined text-[14px] mr-1"
-                      >trending_down</span
-                    >
+                    class="flex items-center text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-full">
+                    <span class="material-symbols-outlined text-[14px] mr-1">trending_down</span>
                     -5%
                   </span>
                 </div>
-                <span class="text-xs text-slate-400 mt-2"
-                  >vs last month (Good)</span
-                >
+                <span class="text-xs text-slate-400 mt-2">dibanding bulan lalu (Lebih Baik)</span>
               </div>
+
+              <!-- Tabungan Bersih -->
               <div
-                class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-1 relative overflow-hidden group"
-              >
-                <div
-                  class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
-                >
-                  <span
-                    class="material-symbols-outlined text-6xl text-emerald-500"
-                    >savings</span
-                  >
+                class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col gap-1 relative overflow-hidden group">
+                <div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <span class="material-symbols-outlined text-6xl text-emerald-500">savings</span>
                 </div>
-                <span
-                  class="text-sm font-medium text-slate-500 dark:text-slate-400"
-                  >Net Savings</span
-                >
+                <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Tabungan Bersih</span>
                 <div class="flex items-end gap-3 mt-1">
+                  <span class="text-2xl font-bold text-slate-900 dark:text-white">Rp4.129.500</span>
                   <span
-                    class="text-2xl font-bold text-slate-900 dark:text-white"
-                    >$4,129.50</span
-                  >
-                  <span
-                    class="flex items-center text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-full"
-                  >
-                    <span class="material-symbols-outlined text-[14px] mr-1"
-                      >trending_up</span
-                    >
+                    class="flex items-center text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-full">
+                    <span class="material-symbols-outlined text-[14px] mr-1">trending_up</span>
                     +22%
                   </span>
                 </div>
-                <span class="text-xs text-slate-400 mt-2">vs last month</span>
+                <span class="text-xs text-slate-400 mt-2">dibanding bulan lalu</span>
               </div>
             </div>
+
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <!-- Chart Section -->
               <div
-                class="lg:col-span-2 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6"
-              >
+                class="lg:col-span-2 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
                 <div class="flex items-center justify-between mb-6">
                   <div>
-                    <h3
-                      class="text-lg font-bold text-slate-900 dark:text-white"
-                    >
-                      Cash Flow
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                      Arus Kas
                     </h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400">
-                      Income vs Expenses over time
+                      Pemasukan vs Pengeluaran dari waktu ke waktu
                     </p>
                   </div>
                   <select
-                    class="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-lg p-2 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                  >
-                    <option>Last 6 Months</option>
-                    <option>This Year</option>
-                    <option>Last Year</option>
+                    class="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-lg p-2 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                    <option>6 Bulan Terakhir</option>
+                    <option>Tahun Ini</option>
+                    <option>Tahun Lalu</option>
                   </select>
                 </div>
+
                 <div class="h-64 flex items-end justify-between gap-4 px-2">
-                  <!-- Chart Bars -->
+                  <!-- Jan -->
                   <div class="w-full flex flex-col gap-2 items-center group">
-                    <div
-                      class="w-full flex gap-1 h-48 items-end justify-center"
-                    >
-                      <div
-                        class="w-3 bg-primary/20 h-[60%] rounded-t-sm group-hover:bg-primary/30 transition-colors relative"
-                      ></div>
-                      <div
-                        class="w-3 bg-primary h-[80%] rounded-t-sm group-hover:bg-primary/90 transition-colors relative"
-                      ></div>
+                    <div class="w-full flex gap-1 h-48 items-end justify-center">
+                      <div class="w-3 bg-primary/20 h-[60%] rounded-t-sm"></div>
+                      <div class="w-3 bg-primary h-[80%] rounded-t-sm"></div>
                     </div>
                     <span class="text-xs font-medium text-slate-500">Jan</span>
                   </div>
+
+                  <!-- Feb -->
                   <div class="w-full flex flex-col gap-2 items-center group">
-                    <div
-                      class="w-full flex gap-1 h-48 items-end justify-center"
-                    >
-                      <div
-                        class="w-3 bg-primary/20 h-[50%] rounded-t-sm group-hover:bg-primary/30 transition-colors relative"
-                      ></div>
-                      <div
-                        class="w-3 bg-primary h-[65%] rounded-t-sm group-hover:bg-primary/90 transition-colors relative"
-                      ></div>
+                    <div class="w-full flex gap-1 h-48 items-end justify-center">
+                      <div class="w-3 bg-primary/20 h-[50%] rounded-t-sm"></div>
+                      <div class="w-3 bg-primary h-[65%] rounded-t-sm"></div>
                     </div>
                     <span class="text-xs font-medium text-slate-500">Feb</span>
                   </div>
+
+                  <!-- Mar -->
                   <div class="w-full flex flex-col gap-2 items-center group">
-                    <div
-                      class="w-full flex gap-1 h-48 items-end justify-center"
-                    >
-                      <div
-                        class="w-3 bg-primary/20 h-[45%] rounded-t-sm group-hover:bg-primary/30 transition-colors relative"
-                      ></div>
-                      <div
-                        class="w-3 bg-primary h-[90%] rounded-t-sm group-hover:bg-primary/90 transition-colors relative"
-                      ></div>
+                    <div class="w-full flex gap-1 h-48 items-end justify-center">
+                      <div class="w-3 bg-primary/20 h-[45%] rounded-t-sm"></div>
+                      <div class="w-3 bg-primary h-[90%] rounded-t-sm"></div>
                     </div>
                     <span class="text-xs font-medium text-slate-500">Mar</span>
                   </div>
+
+                  <!-- Apr -->
                   <div class="w-full flex flex-col gap-2 items-center group">
-                    <div
-                      class="w-full flex gap-1 h-48 items-end justify-center"
-                    >
-                      <div
-                        class="w-3 bg-primary/20 h-[55%] rounded-t-sm group-hover:bg-primary/30 transition-colors relative"
-                      ></div>
-                      <div
-                        class="w-3 bg-primary h-[70%] rounded-t-sm group-hover:bg-primary/90 transition-colors relative"
-                      ></div>
+                    <div class="w-full flex gap-1 h-48 items-end justify-center">
+                      <div class="w-3 bg-primary/20 h-[55%] rounded-t-sm"></div>
+                      <div class="w-3 bg-primary h-[70%] rounded-t-sm"></div>
                     </div>
                     <span class="text-xs font-medium text-slate-500">Apr</span>
                   </div>
+
+                  <!-- Mei -->
                   <div class="w-full flex flex-col gap-2 items-center group">
-                    <div
-                      class="w-full flex gap-1 h-48 items-end justify-center"
-                    >
-                      <div
-                        class="w-3 bg-primary/20 h-[60%] rounded-t-sm group-hover:bg-primary/30 transition-colors relative"
-                      ></div>
-                      <div
-                        class="w-3 bg-primary h-[75%] rounded-t-sm group-hover:bg-primary/90 transition-colors relative"
-                      ></div>
+                    <div class="w-full flex gap-1 h-48 items-end justify-center">
+                      <div class="w-3 bg-primary/20 h-[60%] rounded-t-sm"></div>
+                      <div class="w-3 bg-primary h-[75%] rounded-t-sm"></div>
                     </div>
-                    <span class="text-xs font-medium text-slate-500">May</span>
+                    <span class="text-xs font-medium text-slate-500">Mei</span>
                   </div>
+
+                  <!-- Jun -->
                   <div class="w-full flex flex-col gap-2 items-center group">
-                    <div
-                      class="w-full flex gap-1 h-48 items-end justify-center"
-                    >
-                      <div
-                        class="w-3 bg-primary/20 h-[40%] rounded-t-sm group-hover:bg-primary/30 transition-colors relative"
-                      ></div>
-                      <div
-                        class="w-3 bg-primary h-[85%] rounded-t-sm group-hover:bg-primary/90 transition-colors relative"
-                      ></div>
+                    <div class="w-full flex gap-1 h-48 items-end justify-center">
+                      <div class="w-3 bg-primary/20 h-[40%] rounded-t-sm"></div>
+                      <div class="w-3 bg-primary h-[85%] rounded-t-sm"></div>
                     </div>
                     <span class="text-xs font-medium text-slate-500">Jun</span>
                   </div>
                 </div>
+
                 <div class="flex items-center justify-center gap-6 mt-6">
                   <div class="flex items-center gap-2">
                     <div class="w-3 h-3 bg-primary rounded-full"></div>
-                    <span class="text-xs text-slate-500 font-medium"
-                      >Income</span
-                    >
+                    <span class="text-xs text-slate-500 font-medium">Pemasukan</span>
                   </div>
                   <div class="flex items-center gap-2">
                     <div class="w-3 h-3 bg-primary/20 rounded-full"></div>
-                    <span class="text-xs text-slate-500 font-medium"
-                      >Expenses</span
-                    >
+                    <span class="text-xs text-slate-500 font-medium">Pengeluaran</span>
                   </div>
                 </div>
               </div>
+
+
               <!-- Export Options Panel -->
               <div
-                class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 flex flex-col h-full"
-              >
-                <h3
-                  class="text-lg font-bold text-slate-900 dark:text-white mb-1"
-                >
-                  Export Options
+                class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 flex flex-col h-full">
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">
+                  Opsi Ekspor
                 </h3>
                 <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">
-                  Choose format and range.
+                  Pilih format dan rentang data.
                 </p>
+
                 <form class="flex flex-col gap-4 flex-1">
+                  <!-- Format -->
                   <div class="flex flex-col gap-2">
-                    <label
-                      class="text-xs font-bold uppercase tracking-wider text-slate-500"
-                      >Format</label
-                    >
+                    <label class="text-xs font-bold uppercase tracking-wider text-slate-500">
+                      Format
+                    </label>
                     <div class="grid grid-cols-2 gap-3">
                       <label
-                        class="cursor-pointer border border-primary bg-primary/5 rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-primary/10 transition-colors relative"
-                      >
-                        <input
-                          checked=""
-                          class="hidden"
-                          name="format"
-                          type="radio"
-                        />
-                        <span
-                          class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"
-                        ></span>
-                        <span class="material-symbols-outlined text-primary"
-                          >description</span
-                        >
-                        <span class="text-xs font-bold text-primary"
-                          >PDF Report</span
-                        >
+                        class="cursor-pointer border border-primary bg-primary/5 rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-primary/10 transition-colors relative">
+                        <input checked class="hidden" name="format" type="radio" />
+                        <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                        <span class="material-symbols-outlined text-primary">
+                          description
+                        </span>
+                        <span class="text-xs font-bold text-primary">
+                          Laporan PDF
+                        </span>
                       </label>
+
                       <label
-                        class="cursor-pointer border border-slate-200 dark:border-slate-700 rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-                      >
+                        class="cursor-pointer border border-slate-200 dark:border-slate-700 rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                         <input class="hidden" name="format" type="radio" />
-                        <span class="material-symbols-outlined text-slate-500"
-                          >table_view</span
-                        >
-                        <span
-                          class="text-xs font-bold text-slate-600 dark:text-slate-300"
-                          >CSV / Excel</span
-                        >
+                        <span class="material-symbols-outlined text-slate-500">
+                          table_view
+                        </span>
+                        <span class="text-xs font-bold text-slate-600 dark:text-slate-300">
+                          CSV / Excel
+                        </span>
                       </label>
                     </div>
                   </div>
+
+                  <!-- Include -->
                   <div class="flex flex-col gap-2 mt-2">
-                    <label
-                      class="text-xs font-bold uppercase tracking-wider text-slate-500"
-                      >Include</label
-                    >
-                    <label
-                      class="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer"
-                    >
-                      <input
-                        checked=""
-                        class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4"
-                        type="checkbox"
-                      />
-                      <span class="text-sm text-slate-700 dark:text-slate-200"
-                        >Transaction Details</span
-                      >
+                    <label class="text-xs font-bold uppercase tracking-wider text-slate-500">
+                      Sertakan
                     </label>
+
                     <label
-                      class="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer"
-                    >
-                      <input
-                        checked=""
-                        class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4"
-                        type="checkbox"
-                      />
-                      <span class="text-sm text-slate-700 dark:text-slate-200"
-                        >Charts &amp; Visuals</span
-                      >
+                      class="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+                      <input checked class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4"
+                        type="checkbox" />
+                      <span class="text-sm text-slate-700 dark:text-slate-200">
+                        Detail Transaksi
+                      </span>
                     </label>
+
                     <label
-                      class="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer"
-                    >
-                      <input
-                        class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4"
-                        type="checkbox"
-                      />
-                      <span class="text-sm text-slate-700 dark:text-slate-200"
-                        >Category Breakdown</span
-                      >
+                      class="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+                      <input checked class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4"
+                        type="checkbox" />
+                      <span class="text-sm text-slate-700 dark:text-slate-200">
+                        Grafik & Visual
+                      </span>
+                    </label>
+
+                    <label
+                      class="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+                      <input class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4" type="checkbox" />
+                      <span class="text-sm text-slate-700 dark:text-slate-200">
+                        Rincian Kategori
+                      </span>
                     </label>
                   </div>
+
+                  <!-- Button -->
                   <div class="mt-auto pt-4">
                     <button
                       class="w-full flex items-center justify-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 h-10 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity"
-                      type="button"
-                    >
-                      Generate Preview
+                      type="button">
+                      Buat Pratinjau
                     </button>
                   </div>
                 </form>
               </div>
+
             </div>
-            <!-- Recent Transactions Table Preview -->
+
+            <!-- Recent Transactions -->
             <div
-              class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col overflow-hidden"
-            >
-              <div
-                class="p-6 border-b border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-4"
-              >
+              class="w-full bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+
+              <!-- Header -->
+              <div class="flex items-center justify-between px-8 py-6 border-b border-slate-200 dark:border-slate-800">
                 <div>
-                  <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-                    Recent Transactions
-                  </h3>
+                  <h2 class="text-xl font-bold text-slate-900 dark:text-white">
+                    Transaksi Terbaru
+                  </h2>
                   <p class="text-sm text-slate-500 dark:text-slate-400">
-                    Preview of data to be exported (Last 30 days)
+                    Pratinjau data yang akan diekspor (30 hari terakhir)
                   </p>
                 </div>
-                <div class="relative">
-                  <span
-                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]"
-                    >search</span
-                  >
-                  <input
-                    class="pl-10 pr-4 py-2 text-sm border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-white w-64"
-                    placeholder="Search entries..."
-                    type="text"
-                  />
+
+                <div class="relative w-72">
+                  <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                    search
+                  </span>
+                  <input type="text" placeholder="Cari transaksi..."
+                    class="w-full pl-10 pr-4 py-2 text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none" />
                 </div>
               </div>
+
+              <!-- Table -->
               <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                  <thead
-                    class="bg-slate-50 dark:bg-slate-800/50 text-xs uppercase text-slate-500 font-semibold"
-                  >
+                <table class="w-full text-sm">
+                  <thead class="bg-slate-50 dark:bg-slate-800/50 text-xs uppercase text-slate-500">
                     <tr>
-                      <th class="px-6 py-4">Transaction ID</th>
-                      <th class="px-6 py-4">Date</th>
-                      <th class="px-6 py-4">Description</th>
-                      <th class="px-6 py-4">Category</th>
-                      <th class="px-6 py-4 text-right">Amount</th>
+                      <th class="px-8 py-4 text-left">ID Transaksi</th>
+                      <th class="px-6 py-4 text-left">Tanggal</th>
+                      <th class="px-6 py-4 text-left">Deskripsi</th>
+                      <th class="px-6 py-4 text-left">Kategori</th>
+                      <th class="px-6 py-4 text-right">Nominal</th>
                       <th class="px-6 py-4 text-center">Status</th>
                     </tr>
                   </thead>
-                  <tbody
-                    class="divide-y divide-slate-100 dark:divide-slate-800 text-sm"
-                  >
-                    <tr
-                      class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-                    >
-                      <td class="px-6 py-4 text-slate-500 font-mono">
-                        #TRX-8821
-                      </td>
-                      <td class="px-6 py-4 text-slate-700 dark:text-slate-300">
-                        Oct 24, 2023
-                      </td>
-                      <td class="px-6 py-4">
+
+                  <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+
+                    <!-- Row 1 -->
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                      <td class="px-8 py-5 font-mono text-slate-500">#TRX-8821</td>
+                      <td class="px-6 py-5">24 Okt 2023</td>
+                      <td class="px-6 py-5">
                         <div class="flex items-center gap-3">
-                          <div
-                            class="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0"
-                          >
-                            <span class="material-symbols-outlined text-[18px]"
-                              >business_center</span
-                            >
+                          <div class="w-9 h-9 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[18px]">work</span>
                           </div>
-                          <span
-                            class="font-medium text-slate-900 dark:text-white"
-                            >Upwork Escrow</span
-                          >
+                          <span class="font-medium text-slate-900 dark:text-white">
+                            Upwork Escrow
+                          </span>
                         </div>
                       </td>
-                      <td class="px-6 py-4 text-slate-600 dark:text-slate-400">
-                        Freelance Income
+                      <td class="px-6 py-5 text-slate-600 dark:text-slate-400">
+                        Pendapatan Freelance
                       </td>
-                      <td
-                        class="px-6 py-4 text-right font-bold text-emerald-600"
-                      >
-                        +$1,250.00
+                      <td class="px-6 py-5 text-right font-bold text-emerald-600">
+                        +Rp 1.250.000
                       </td>
-                      <td class="px-6 py-4 text-center">
-                        <span
-                          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
-                        >
-                          Completed
+                      <td class="px-6 py-5 text-center">
+                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-700">
+                          Selesai
                         </span>
                       </td>
                     </tr>
-                    <tr
-                      class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-                    >
-                      <td class="px-6 py-4 text-slate-500 font-mono">
-                        #TRX-8820
-                      </td>
-                      <td class="px-6 py-4 text-slate-700 dark:text-slate-300">
-                        Oct 23, 2023
-                      </td>
-                      <td class="px-6 py-4">
+
+                    <!-- Row 2 -->
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                      <td class="px-8 py-5 font-mono text-slate-500">#TRX-8820</td>
+                      <td class="px-6 py-5">23 Okt 2023</td>
+                      <td class="px-6 py-5">
                         <div class="flex items-center gap-3">
                           <div
-                            class="w-8 h-8 rounded bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400 shrink-0"
-                          >
-                            <span class="material-symbols-outlined text-[18px]"
-                              >cloud</span
-                            >
+                            class="w-9 h-9 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[18px]">cloud</span>
                           </div>
-                          <span
-                            class="font-medium text-slate-900 dark:text-white"
-                            >AWS Services</span
-                          >
+                          <span class="font-medium text-slate-900 dark:text-white">
+                            AWS Services
+                          </span>
                         </div>
                       </td>
-                      <td class="px-6 py-4 text-slate-600 dark:text-slate-400">
-                        Software
+                      <td class="px-6 py-5 text-slate-600 dark:text-slate-400">
+                        Perangkat Lunak
                       </td>
-                      <td
-                        class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white"
-                      >
-                        -$142.50
+                      <td class="px-6 py-5 text-right font-bold text-slate-900 dark:text-white">
+                        -Rp 142.500
                       </td>
-                      <td class="px-6 py-4 text-center">
-                        <span
-                          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
-                        >
-                          Completed
+                      <td class="px-6 py-5 text-center">
+                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-700">
+                          Selesai
                         </span>
                       </td>
                     </tr>
-                    <tr
-                      class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-                    >
-                      <td class="px-6 py-4 text-slate-500 font-mono">
-                        #TRX-8819
-                      </td>
-                      <td class="px-6 py-4 text-slate-700 dark:text-slate-300">
-                        Oct 21, 2023
-                      </td>
-                      <td class="px-6 py-4">
+
+                    <!-- Row 3 -->
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                      <td class="px-8 py-5 font-mono text-slate-500">#TRX-8819</td>
+                      <td class="px-6 py-5">21 Okt 2023</td>
+                      <td class="px-6 py-5">
                         <div class="flex items-center gap-3">
                           <div
-                            class="w-8 h-8 rounded bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0"
-                          >
-                            <span class="material-symbols-outlined text-[18px]"
-                              >shopping_cart</span
-                            >
+                            class="w-9 h-9 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
                           </div>
-                          <span
-                            class="font-medium text-slate-900 dark:text-white"
-                            >Apple Store</span
-                          >
+                          <span class="font-medium text-slate-900 dark:text-white">
+                            Apple Store
+                          </span>
                         </div>
                       </td>
-                      <td class="px-6 py-4 text-slate-600 dark:text-slate-400">
-                        Equipment
+                      <td class="px-6 py-5 text-slate-600 dark:text-slate-400">
+                        Peralatan
                       </td>
-                      <td
-                        class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white"
-                      >
-                        -$2,199.00
+                      <td class="px-6 py-5 text-right font-bold text-slate-900 dark:text-white">
+                        -Rp 2.199.000
                       </td>
-                      <td class="px-6 py-4 text-center">
-                        <span
-                          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300"
-                        >
+                      <td class="px-6 py-5 text-center">
+                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-slate-200 text-slate-700">
                           Pending
                         </span>
                       </td>
                     </tr>
-                    <tr
-                      class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-                    >
-                      <td class="px-6 py-4 text-slate-500 font-mono">
-                        #TRX-8818
-                      </td>
-                      <td class="px-6 py-4 text-slate-700 dark:text-slate-300">
-                        Oct 20, 2023
-                      </td>
-                      <td class="px-6 py-4">
+
+                    <!-- Row 4 -->
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                      <td class="px-8 py-5 font-mono text-slate-500">#TRX-8818</td>
+                      <td class="px-6 py-5">20 Okt 2023</td>
+                      <td class="px-6 py-5">
                         <div class="flex items-center gap-3">
-                          <div
-                            class="w-8 h-8 rounded bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 shrink-0"
-                          >
-                            <span class="material-symbols-outlined text-[18px]"
-                              >coffee</span
-                            >
+                          <div class="w-9 h-9 rounded-lg bg-green-100 text-green-600 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-[18px]">coffee</span>
                           </div>
-                          <span
-                            class="font-medium text-slate-900 dark:text-white"
-                            >Starbucks</span
-                          >
+                          <span class="font-medium text-slate-900 dark:text-white">
+                            Starbucks
+                          </span>
                         </div>
                       </td>
-                      <td class="px-6 py-4 text-slate-600 dark:text-slate-400">
-                        Food &amp; Dining
+                      <td class="px-6 py-5 text-slate-600 dark:text-slate-400">
+                        Makanan & Minuman
                       </td>
-                      <td
-                        class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white"
-                      >
-                        -$8.50
+                      <td class="px-6 py-5 text-right font-bold text-slate-900 dark:text-white">
+                        -Rp 8.500
                       </td>
-                      <td class="px-6 py-4 text-center">
-                        <span
-                          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
-                        >
-                          Completed
+                      <td class="px-6 py-5 text-center">
+                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-700">
+                          Selesai
                         </span>
                       </td>
                     </tr>
-                    <tr
-                      class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-                    >
-                      <td class="px-6 py-4 text-slate-500 font-mono">
-                        #TRX-8817
-                      </td>
-                      <td class="px-6 py-4 text-slate-700 dark:text-slate-300">
-                        Oct 18, 2023
-                      </td>
-                      <td class="px-6 py-4">
-                        <div class="flex items-center gap-3">
-                          <div
-                            class="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0"
-                          >
-                            <span class="material-symbols-outlined text-[18px]"
-                              >business_center</span
-                            >
-                          </div>
-                          <span
-                            class="font-medium text-slate-900 dark:text-white"
-                            >Stripe Payout</span
-                          >
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-slate-600 dark:text-slate-400">
-                        Sales Revenue
-                      </td>
-                      <td
-                        class="px-6 py-4 text-right font-bold text-emerald-600"
-                      >
-                        +$3,450.00
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <span
-                          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
-                        >
-                          Completed
-                        </span>
-                      </td>
-                    </tr>
+
                   </tbody>
                 </table>
               </div>
-              <div
-                class="p-4 border-t border-slate-200 dark:border-slate-800 flex justify-center"
-              >
-                <button
-                  class="text-sm text-primary font-medium hover:underline"
-                >
-                  View All Transactions
+
+              <!-- Footer -->
+              <div class="px-6 py-4 border-t border-slate-200 dark:border-slate-800 text-center">
+                <button class="text-sm font-medium text-primary hover:underline">
+                  Lihat Semua Transaksi
                 </button>
               </div>
             </div>
+
+
           </div>
         </main>
-      </div>
     </div>
-  </body>
-    <script>
-    const hamburger = document.getElementById("hamburgerBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+  </div>
+</body>
+<script>
+  const hamburger = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("opacity-0");
-      mobileMenu.classList.toggle("scale-95");
-      mobileMenu.classList.toggle("pointer-events-none");
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("opacity-0");
+    mobileMenu.classList.toggle("scale-95");
+    mobileMenu.classList.toggle("pointer-events-none");
 
-      hamburger.classList.toggle("active");
-    });
+    hamburger.classList.toggle("active");
+  });
 
-    // Close menu when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
-      }
-    });
-  </script>
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+    }
+  });
+</script>
 
-  <script src="../assets/app.js"></script>
-  <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+<script src="../assets/app.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
 </html>

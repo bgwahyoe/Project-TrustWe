@@ -1,492 +1,426 @@
 <!DOCTYPE html>
 
 <html class="light" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>TrustWe - Intelligent Wealth Management</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='36' rx='6' fill='%230F766E'/%3E%3Crect x='10' y='18' width='44' height='28' rx='4' fill='%2314B8A6'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%230F766E'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-size='14' fill='white' font-weight='700'%3E%24%3C/text%3E%3C/svg%3E"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#1a227f",
-              "accent-green": "#10b981",
-              "background-light": "#f6f6f8",
-              "background-dark": "#121320",
-              "slate-text": "#64748b",
-              "slate-heading": "#1e293b",
-            },
-            fontFamily: {
-              display: ["Inter", "sans-serif"],
-              body: ["Inter", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              full: "9999px",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>TrustWe - Intelligent Wealth Management</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='36' rx='6' fill='%230F766E'/%3E%3Crect x='10' y='18' width='44' height='28' rx='4' fill='%2314B8A6'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%230F766E'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-size='14' fill='white' font-weight='700'%3E%24%3C/text%3E%3C/svg%3E" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1a227f",
+            "accent-green": "#10b981",
+            "background-light": "#f6f6f8",
+            "background-dark": "#121320",
+            "slate-text": "#64748b",
+            "slate-heading": "#1e293b",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
           },
         },
-      };
-    </script>
-    
-  </head>
-  <body
-    class="font-display bg-background-light dark:bg-background-dark text-slate-heading antialiased overflow-x-hidden"
-  >
-    <div class="relative flex min-h-screen w-full flex-col group/design-root">
-      <!-- Navigation -->
-      <nav
-        class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50"
-      >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
-              <div
-                class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
-              >
-                <span class="material-symbols-outlined"
-                  >account_balance_wallet</span
-                >
-              </div>
-              <h2
-                class="text-primary dark:text-white text-xl font-bold tracking-tight"
-              href="index.html">
-                TrustWe
-              </h2>
-            </div>
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex flex-1 justify-end items-center gap-8">
-              <div class="flex gap-6">
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="index.html"
-                  >Home</a
-                >
-
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="pages/dashboard.html"
-                  >Dashboard</a
-                >
-
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="pages/transaksi.html"
-                  >Transaksi</a
-                >
-
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="pages/budgetin.html"
-                  >Budgetin</a
-                >
-
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="pages/report.html"
-                  >Report</a
-                >
-                <a
-                  class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                  href="pages/team.html"
-                  >Our Team</a
-                >
-              </div>
-            </div>
-
-            <!-- Mobile Menu Icon -->
-            <div class="md:hidden flex items-center">
-              <button
-                id="hamburgerBtn"
-                class="relative z-50 flex flex-col gap-1.5 p-2"
-              >
-                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
-                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
-                <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div
-          id="mobileMenu"
-          class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
-                opacity-0 scale-95 pointer-events-none transition-all duration-200"
-        >
-          <div class="flex flex-col gap-2 p-4">
-            <a class="mobile-link" href="../index.html">Home</a>
-            <a class="mobile-link" href="pages/dashboard.html">Dashboard</a>
-            <a class="mobile-link" href="pages/transaksi.html">Transaksi</a>
-            <a class="mobile-link" href="pages/budgetin.html">Budgetin</a>
-            <a class="mobile-link" href="pages/report.html">Report</a>
-            <a class="mobile-link" href="pages/team.html">Our Team</a>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Hero Section -->
-      <section
-        class="relative w-full py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
-      >
-        <div class="@container">
-          <div class="flex flex-col-reverse lg:flex-row gap-12 items-center">
-            <!-- Text Content -->
-            <div class="flex flex-col gap-6 lg:w-1/2 items-start text-left">
-              <div
-                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-bold uppercase tracking-wider"
-              >
-                <span class="w-2 h-2 rounded-full bg-accent-green"></span>
-                Trusted by 50k+ Users
-              </div>
-              <h1
-                class="text-slate-900 dark:text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight"
-              >
-                Secure Your Future with
-                <span class="text-primary">Intelligent</span> Wealth Management
-              </h1>
-              <p
-                class="text-slate-600 dark:text-slate-400 text-lg sm:text-xl leading-relaxed max-w-lg"
-              >
-                TrustWe simplifies your financial life with automated tracking,
-                smart budgeting, and secure investment monitoring in one place.
-              </p>
-              <div class="flex flex-wrap gap-4 mt-2">
-                <button
-                  class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-blue-900 transition-all shadow-lg hover:shadow-primary/20"
-                >
-                  Get Started Free
-                </button>
-                <button
-                  class="flex items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700 text-slate-700 dark:text-white text-base font-bold hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
-                >
-                  Learn More
-                </button>
-              </div>
-              <div class="flex items-center gap-4 text-sm text-slate-500 mt-4">
-                <div class="flex items-center gap-1">
-                  <span
-                    class="material-symbols-outlined text-accent-green text-lg"
-                    >check_circle</span
-                  >
-                  <span>No credit card required</span>
-                </div>
-                <div class="flex items-center gap-1">
-                  <span
-                    class="material-symbols-outlined text-accent-green text-lg"
-                    >check_circle</span
-                  >
-                  <span>14-day free trial</span>
-                </div>
-              </div>
-            </div>
-            <!-- Hero Image -->
-            <div class="w-full lg:w-1/2">
-              <div
-                class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-gray-700"
-              >
-                <div
-                  class="absolute inset-0 bg-cover bg-center"
-                  data-alt="Dashboard showing financial growth charts and data analytics on a screen"
-                  style="
-                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4B9Oza00Lo4DrLhvjAKnOkhl8gnoet3O6cO9zhHlGijZiZibJvV9sdz060q_cmCF5pM7vxpcl50AmTZ59njnXFtBCjNjfR9bJqJwy20UrY1E_yhqEcsYcVVw5zvZ1TxOrqaM52PX0F2JZ1g93I3C7WrcheGGph6LJXqVhk_waMUPIt15gkbDvqsZ4IGi-vKiNTMNe8msMmSsClsO3kbBTTZVTZU4_muuvTj399onoE4GSKxMNnvYGVwjpt34ltZfTfCYSy66GoII');
-                  "
-                ></div>
-                <!-- Decorative overlay gradient -->
-                <div
-                  class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Stats Section -->
-      <section
-        class="w-full bg-white dark:bg-slate-900 border-y border-gray-100 dark:border-gray-800"
-      >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div
-              class="flex flex-col items-center md:items-start p-6 rounded-xl bg-background-light dark:bg-slate-800/50"
-            >
-              <div
-                class="p-2 mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-primary dark:text-blue-300"
-              >
-                <span class="material-symbols-outlined">account_balance</span>
-              </div>
-              <p
-                class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide"
-              >
-                Assets Managed
-              </p>
-              <p class="text-slate-900 dark:text-white text-3xl font-bold mt-1">
-                $1B+
-              </p>
-            </div>
-            <div
-              class="flex flex-col items-center md:items-start p-6 rounded-xl bg-background-light dark:bg-slate-800/50"
-            >
-              <div
-                class="p-2 mb-3 bg-green-100 dark:bg-green-900/30 rounded-lg text-accent-green"
-              >
-                <span class="material-symbols-outlined"
-                  >sentiment_satisfied</span
-                >
-              </div>
-              <p
-                class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide"
-              >
-                Happy Users
-              </p>
-              <p class="text-slate-900 dark:text-white text-3xl font-bold mt-1">
-                50k+
-              </p>
-            </div>
-            <div
-              class="flex flex-col items-center md:items-start p-6 rounded-xl bg-background-light dark:bg-slate-800/50"
-            >
-              <div
-                class="p-2 mb-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-purple-600 dark:text-purple-300"
-              >
-                <span class="material-symbols-outlined">bolt</span>
-              </div>
-              <p
-                class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide"
-              >
-                Uptime
-              </p>
-              <p class="text-slate-900 dark:text-white text-3xl font-bold mt-1">
-                99.9%
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Features Section -->
-      <section
-        class="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
-      >
-        <div class="flex flex-col gap-12">
-          <div class="flex flex-col gap-4 text-center max-w-3xl mx-auto">
-            <h2
-              class="text-slate-900 dark:text-white text-3xl md:text-4xl font-bold leading-tight"
-            >
-              Why Choose TrustWe
-            </h2>
-            <p class="text-slate-600 dark:text-slate-400 text-lg">
-              Experience the power of comprehensive financial oversight with
-              tools designed for your success and peace of mind.
-            </p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Feature 1 -->
-            <div
-              class="group flex flex-col gap-4 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20 transition-all duration-300"
-            >
-              <div
-                class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300"
-              >
-                <span class="material-symbols-outlined text-3xl"
-                  >trending_up</span
-                >
-              </div>
-              <div>
-                <h3
-                  class="text-slate-900 dark:text-white text-xl font-bold mb-2"
-                >
-                  Real-Time Tracking
-                </h3>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Monitor all your accounts, investments, and liabilities in one
-                  centralized real-time dashboard.
-                </p>
-              </div>
-            </div>
-            <!-- Feature 2 -->
-            <div
-              class="group flex flex-col gap-4 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20 transition-all duration-300"
-            >
-              <div
-                class="size-12 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green group-hover:bg-accent-green group-hover:text-white transition-colors duration-300"
-              >
-                <span class="material-symbols-outlined text-3xl"
-                  >psychology</span
-                >
-              </div>
-              <div>
-                <h3
-                  class="text-slate-900 dark:text-white text-xl font-bold mb-2"
-                >
-                  Smart Budgeting
-                </h3>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  AI-driven insights analyze your spending habits to help you
-                  save more and reach goals faster.
-                </p>
-              </div>
-            </div>
-            <!-- Feature 3 -->
-            <div
-              class="group flex flex-col gap-4 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20 transition-all duration-300"
-            >
-              <div
-                class="size-12 rounded-xl bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300"
-              >
-                <span class="material-symbols-outlined text-3xl"
-                  >verified_user</span
-                >
-              </div>
-              <div>
-                <h3
-                  class="text-slate-900 dark:text-white text-xl font-bold mb-2"
-                >
-                  Bank-Level Security
-                </h3>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Your financial data is protected by industry-leading 256-bit
-                  encryption and multi-factor authentication.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- CTA Section -->
-      <section class="w-full bg-primary py-16 px-4">
-        <div
-          class="max-w-4xl mx-auto text-center flex flex-col items-center gap-6"
-        >
-          <h2 class="text-white text-3xl md:text-4xl font-bold">
-            Ready to take control?
-          </h2>
-          <p class="text-blue-100 text-lg max-w-2xl">
-            Join over 50,000 users who trust TrustWe for their financial health.
-            Start your 14-day free trial today.
-          </p>
-          <button
-            class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-bold text-lg shadow-lg transition-transform hover:-translate-y-1"
-          >
-            Start Free Trial
-          </button>
-        </div>
-      </section>
-      <!-- Footer -->
-      <footer
-        class="w-full bg-slate-50 dark:bg-slate-950 border-t border-gray-200 dark:border-gray-800 pt-16 pb-8"
-      >
-        <div
-          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10"
-        >
-          <div
-            class="flex flex-col md:flex-row justify-between items-center gap-8"
-          >
-            <!-- Brand -->
-            <div class="flex items-center gap-2">
-              <div class="size-6 text-slate-400">
-                <span class="material-symbols-outlined"
-                  >account_balance_wallet</span
-                >
-              </div>
-              <span class="text-slate-700 dark:text-slate-300 text-lg font-bold"
-                >TrustWe</span
-              >
-            </div>
-            <!-- Links -->
-            <div class="flex flex-wrap justify-center gap-8">
-              <a
-                class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                href="#"
-                >Privacy Policy</a
-              >
-              <a
-                class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                href="#"
-                >Terms of Service</a
-              >
-              <a
-                class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-                href="#"
-                >Support</a
-              >
-            </div>
-            <!-- Socials -->
-            <div class="flex gap-4">
-              <a
-                class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors"
-                href="#"
-              >
-                <span class="material-symbols-outlined">share</span>
-              </a>
-              <a
-                class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors"
-                href="#"
-              >
-                <span class="material-symbols-outlined">work</span>
-              </a>
-              <a
-                class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors"
-                href="#"
-              >
-                <span class="material-symbols-outlined">groups</span>
-              </a>
-            </div>
-          </div>
-          <div
-            class="border-t border-gray-200 dark:border-gray-800 pt-8 text-center"
-          >
-            <p class="text-slate-400 text-sm">
-              © 2024 TrustWe. All rights reserved. Kelompok P. Alhamdulillah.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
-    <script>
-    const hamburger = document.getElementById("hamburgerBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("opacity-0");
-      mobileMenu.classList.toggle("scale-95");
-      mobileMenu.classList.toggle("pointer-events-none");
-
-      hamburger.classList.toggle("active");
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
-      }
-    });
+      },
+    };
   </script>
 
-  <script src="../assets/app.js"></script>
-  <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-heading antialiased overflow-x-hidden">
+  <div class="relative flex min-h-screen w-full flex-col group/design-root">
+    <!-- Navigation -->
+    <nav class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <a href="../index.html" class="flex items-center gap-2">
+        <div
+          class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
+        >
+          <span class="material-symbols-outlined">
+            account_balance_wallet
+          </span>
+        </div>
+        <h2
+          class="text-primary dark:text-white text-xl font-bold tracking-tight"
+        >
+          TrustWe
+        </h2>
+      </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+            <div class="flex gap-6">
+              <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                href="index.html">
+                Beranda
+              </a>
+
+              <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                href="pages/dashboard.html">
+                Dasbor
+              </a>
+
+              <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                href="pages/transaksi.html">
+                Transaksi
+              </a>
+
+              <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                href="pages/budgetin.html">
+                Anggaran
+              </a>
+
+              <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                href="pages/report.html">
+                Laporan
+              </a>
+
+              <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                href="pages/team.html">
+                Tim Kami
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Icon -->
+          <div class="md:hidden flex items-center">
+            <button id="hamburgerBtn" class="relative z-50 flex flex-col gap-1.5 p-2">
+              <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
+              <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
+              <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
+           opacity-0 scale-95 pointer-events-none transition-all duration-200">
+        <div class="flex flex-col gap-2 p-4">
+          <a class="mobile-link" href="../index.html">Beranda</a>
+          <a class="mobile-link" href="pages/dashboard.html">Dasbor</a>
+          <a class="mobile-link" href="pages/transaksi.html">Transaksi</a>
+          <a class="mobile-link" href="pages/budgetin.html">Anggaran</a>
+          <a class="mobile-link" href="pages/report.html">Laporan</a>
+          <a class="mobile-link" href="pages/team.html">Tim Kami</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="relative w-full py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="@container">
+        <div class="flex flex-col-reverse lg:flex-row gap-12 items-center">
+          <!-- Text Content -->
+          <div class="flex flex-col gap-6 lg:w-1/2 items-start text-left">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-bold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-accent-green"></span>
+              Dipercaya oleh 50.000+ Pengguna
+            </div>
+
+            <h1
+              class="text-slate-900 dark:text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+              Amankan Masa Depan Anda dengan
+              <span class="text-primary">Manajemen</span> Keuangan Cerdas
+            </h1>
+
+            <p class="text-slate-600 dark:text-slate-400 text-lg sm:text-xl leading-relaxed max-w-lg">
+              TrustWe mempermudah pengelolaan keuangan Anda melalui pencatatan
+              otomatis, penganggaran cerdas, dan pemantauan investasi yang aman
+              dalam satu platform.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-2">
+              <button
+                class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-blue-900 transition-all shadow-lg hover:shadow-primary/20">
+                Mulai Gratis
+              </button>
+              <button
+                class="flex items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700 text-slate-700 dark:text-white text-base font-bold hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors">
+                Pelajari Lebih Lanjut
+              </button>
+            </div>
+
+            <div class="flex items-center gap-4 text-sm text-slate-500 mt-4">
+              <div class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-accent-green text-lg">
+                  check_circle
+                </span>
+                <span>Tidak perlu kartu kredit</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-accent-green text-lg">
+                  check_circle
+                </span>
+                <span>Uji coba gratis 14 hari</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="w-full lg:w-1/2">
+            <div
+              class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-gray-700">
+              <div class="absolute inset-0 bg-cover bg-center"
+                data-alt="Dasbor yang menampilkan grafik pertumbuhan keuangan dan analitik data" style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4B9Oza00Lo4DrLhvjAKnOkhl8gnoet3O6cO9zhHlGijZiZibJvV9sdz060q_cmCF5pM7vxpcl50AmTZ59njnXFtBCjNjfR9bJqJwy20UrY1E_yhqEcsYcVVw5zvZ1TxOrqaM52PX0F2JZ1g93I3C7WrcheGGph6LJXqVhk_waMUPIt15gkbDvqsZ4IGi-vKiNTMNe8msMmSsClsO3kbBTTZVTZU4_muuvTj399onoE4GSKxMNnvYGVwjpt34ltZfTfCYSy66GoII');
+            "></div>
+
+              <!-- Decorative overlay gradient -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Stats Section -->
+    <section class="w-full bg-white dark:bg-slate-900 border-y border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="flex flex-col items-center md:items-start p-6 rounded-xl bg-background-light dark:bg-slate-800/50">
+            <div class="p-2 mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-primary dark:text-blue-300">
+              <span class="material-symbols-outlined">account_balance</span>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide">
+              Aset Terkelola
+            </p>
+            <p class="text-slate-900 dark:text-white text-3xl font-bold mt-1">
+              $1M+
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col items-center md:items-start p-6 rounded-xl bg-background-light dark:bg-slate-800/50">
+            <div class="p-2 mb-3 bg-green-100 dark:bg-green-900/30 rounded-lg text-accent-green">
+              <span class="material-symbols-outlined">
+                sentiment_satisfied
+              </span>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide">
+              Pengguna Puas
+            </p>
+            <p class="text-slate-900 dark:text-white text-3xl font-bold mt-1">
+              50rb+
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col items-center md:items-start p-6 rounded-xl bg-background-light dark:bg-slate-800/50">
+            <div class="p-2 mb-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-purple-600 dark:text-purple-300">
+              <span class="material-symbols-outlined">bolt</span>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide">
+              Waktu Aktif
+            </p>
+            <p class="text-slate-900 dark:text-white text-3xl font-bold mt-1">
+              99,9%
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="flex flex-col gap-12">
+        <div class="flex flex-col gap-4 text-center max-w-3xl mx-auto">
+          <h2 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-bold leading-tight">
+            Mengapa Memilih TrustWe
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-lg">
+            Rasakan kemudahan pengelolaan keuangan secara menyeluruh dengan
+            fitur-fitur yang dirancang untuk mendukung kesuksesan dan ketenangan
+            Anda.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="group flex flex-col gap-4 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20 transition-all duration-300">
+            <div
+              class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <span class="material-symbols-outlined text-3xl">
+                trending_up
+              </span>
+            </div>
+            <div>
+              <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-2">
+                Pemantauan Real-Time
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Pantau seluruh akun, investasi, dan kewajiban finansial Anda dalam
+                satu dasbor terpusat secara real-time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="group flex flex-col gap-4 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20 transition-all duration-300">
+            <div
+              class="size-12 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green group-hover:bg-accent-green group-hover:text-white transition-colors duration-300">
+              <span class="material-symbols-outlined text-3xl">
+                psychology
+              </span>
+            </div>
+            <div>
+              <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-2">
+                Penganggaran Cerdas
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Analisis berbasis AI membantu memahami pola pengeluaran Anda agar
+                dapat menabung lebih optimal dan mencapai tujuan lebih cepat.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="group flex flex-col gap-4 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20 transition-all duration-300">
+            <div
+              class="size-12 rounded-xl bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+              <span class="material-symbols-outlined text-3xl">
+                verified_user
+              </span>
+            </div>
+            <div>
+              <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-2">
+                Keamanan Setara Perbankan
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Data keuangan Anda dilindungi dengan enkripsi 256-bit berstandar
+                industri serta autentikasi multi-faktor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="w-full bg-primary py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
+        <h2 class="text-white text-3xl md:text-4xl font-bold">
+          Siap Mengelola Keuangan Anda?
+        </h2>
+        <p class="text-blue-100 text-lg max-w-2xl">
+          Bergabunglah bersama lebih dari 50.000 pengguna yang mempercayakan
+          kesehatan finansial mereka kepada TrustWe. Mulai uji coba gratis
+          selama 14 hari sekarang.
+        </p>
+        <button
+          class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-bold text-lg shadow-lg transition-transform hover:-translate-y-1">
+          Mulai Uji Coba Gratis
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-slate-50 dark:bg-slate-950 border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+          <!-- Brand -->
+          <div class="flex items-center gap-2">
+            <div class="size-6 text-slate-400">
+              <span class="material-symbols-outlined">
+                account_balance_wallet
+              </span>
+            </div>
+            <span class="text-slate-700 dark:text-slate-300 text-lg font-bold">
+              TrustWe
+            </span>
+          </div>
+
+          <!-- Links -->
+          <div class="flex flex-wrap justify-center gap-8">
+            <a class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+              href="#">
+              Kebijakan Privasi
+            </a>
+            <a class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+              href="#">
+              Syarat & Ketentuan
+            </a>
+            <a class="text-slate-500 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+              href="#">
+              Bantuan
+            </a>
+          </div>
+
+          <!-- Socials -->
+          <div class="flex gap-4">
+            <a class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="#">
+              <span class="material-symbols-outlined">share</span>
+            </a>
+            <a class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="#">
+              <span class="material-symbols-outlined">work</span>
+            </a>
+            <a class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="#">
+              <span class="material-symbols-outlined">groups</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 dark:border-gray-800 pt-8 text-center">
+          <p class="text-slate-400 text-sm">
+            © 2024 TrustWe. Seluruh hak cipta dilindungi. Kelompok P. Alhamdulillah.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+<script>
+  const hamburger = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("opacity-0");
+    mobileMenu.classList.toggle("scale-95");
+    mobileMenu.classList.toggle("pointer-events-none");
+
+    hamburger.classList.toggle("active");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+    }
+  });
+</script>
+
+<script src="../assets/app.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
 </html>

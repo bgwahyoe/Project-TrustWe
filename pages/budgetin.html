@@ -1,153 +1,142 @@
 <!DOCTYPE html>
 
 <html class="light" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>TrustWe Budgeting</title>
-    <!-- Material Symbols -->
-     <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='36' rx='6' fill='%230F766E'/%3E%3Crect x='10' y='18' width='44' height='28' rx='4' fill='%2314B8A6'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%230F766E'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-size='14' fill='white' font-weight='700'%3E%24%3C/text%3E%3C/svg%3E"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Theme Configuration -->
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#1a237e" /* Navy Blue from prompt */,
-              "primary-light": "#534bae",
-              secondary: "#64748b" /* Slate Grey */,
-              "accent-green": "#10b981" /* Emerald Green */,
-              "background-light": "#f6f6f8",
-              "background-dark": "#121320",
-              "card-light": "#ffffff",
-              "card-dark": "#1a1b26",
-              "border-light": "#e2e8f0",
-              "border-dark": "#2e2e3a",
-            },
-            fontFamily: {
-              display: ["Inter", "Noto Sans", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              "2xl": "1rem",
-              full: "9999px",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>TrustWe Budgeting</title>
+  <!-- Material Symbols -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='36' rx='6' fill='%230F766E'/%3E%3Crect x='10' y='18' width='44' height='28' rx='4' fill='%2314B8A6'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%230F766E'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-size='14' fill='white' font-weight='700'%3E%24%3C/text%3E%3C/svg%3E" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Theme Configuration -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1a237e" /* Navy Blue from prompt */,
+            "primary-light": "#534bae",
+            secondary: "#64748b" /* Slate Grey */,
+            "accent-green": "#10b981" /* Emerald Green */,
+            "background-light": "#f6f6f8",
+            "background-dark": "#121320",
+            "card-light": "#ffffff",
+            "card-dark": "#1a1b26",
+            "border-light": "#e2e8f0",
+            "border-dark": "#2e2e3a",
+          },
+          fontFamily: {
+            display: ["Inter", "Noto Sans", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            full: "9999px",
           },
         },
-      };
-    </script>
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      /* Custom scrollbar for better aesthetic */
-      ::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 3px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-      }
-    </style>
-  </head>
-  <body
-    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased overflow-hidden"
-  >
-    <div class="flex h-screen w-full">
-<div class="flex flex-col h-screen w-full overflow-hidden">
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
 
-  <!-- Global Navbar (copied from index.html) -->
-  <nav
-    class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50"
-  >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-          <div
-            class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
-          >
-            <span class="material-symbols-outlined"
-              >account_balance_wallet</span
-            >
-          </div>
-          <h2
-            class="text-primary dark:text-white text-xl font-bold tracking-tight"
-          href="../index.html">
-            TrustWe
-          </h2>
+    /* Custom scrollbar for better aesthetic */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased overflow-hidden">
+  <div class="flex h-screen w-full">
+    <div class="flex flex-col h-screen w-full overflow-hidden">
+
+      <!-- Global Navbar (copied from index.html) -->
+      <nav class="w-full bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center gap-2">
+        <div
+          class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
+        >
+          <span class="material-symbols-outlined">
+            account_balance_wallet
+          </span>
         </div>
+        <h2
+          class="text-primary dark:text-white text-xl font-bold tracking-tight"
+        >
+          TrustWe
+        </h2>
+      </a>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex flex-1 justify-end items-center gap-8">
-          <div class="flex gap-6">
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="../index.html"
-              >Home</a
-            >
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+              <div class="flex gap-6">
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="../index.html">
+                  Beranda
+                </a>
 
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="dashboard.html"
-              >Dashboard</a
-            >
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="dashboard.html">
+                  Dasbor
+                </a>
 
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="transaksi.html"
-              >Transaksi</a
-            >
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="transaksi.html">
+                  Transaksi
+                </a>
 
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="budgetin.html"
-              >Budgetin</a
-            >
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="budgetin.html">
+                  Anggaran
+                </a>
 
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="report.html"
-              >Report</a
-            >
-            <a
-              class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
-              href="team.html"
-              >Our Team</a
-            >
-          </div>
-        </div>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="report.html">
+                  Laporan
+                </a>
 
-        <!-- Mobile Menu Icon -->
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors"
+                  href="team.html">
+                  Tim Kami
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Menu Icon -->
             <div class="md:hidden flex items-center">
-              <button
-                id="hamburgerBtn"
-                class="relative z-50 flex flex-col gap-1.5 p-2"
-              >
+              <button id="hamburgerBtn" class="relative z-50 flex flex-col gap-1.5 p-2">
                 <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
                 <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
                 <span class="block h-0.5 w-6 bg-slate-700 dark:bg-white transition"></span>
@@ -157,506 +146,328 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div
-          id="mobileMenu"
-          class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
-                opacity-0 scale-95 pointer-events-none transition-all duration-200"
-        >
+        <div id="mobileMenu" class="fixed top-16 right-4 w-56 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-gray-200 dark:border-gray-800
+           opacity-0 scale-95 pointer-events-none transition-all duration-200">
           <div class="flex flex-col gap-2 p-4">
-            <a class="mobile-link" href="../index.html">Home</a>
-            <a class="mobile-link" href="dashboard.html">Dashboard</a>
+            <a class="mobile-link" href="../index.html">Beranda</a>
+            <a class="mobile-link" href="dashboard.html">Dasbor</a>
             <a class="mobile-link" href="transaksi.html">Transaksi</a>
-            <a class="mobile-link" href="budgetin.html">Budgetin</a>
-            <a class="mobile-link" href="report.html">Report</a>
-            <a class="mobile-link" href="team.html">Our Team</a>
+            <a class="mobile-link" href="budgetin.html">Anggaran</a>
+            <a class="mobile-link" href="report.html">Laporan</a>
+            <a class="mobile-link" href="team.html">Tim Kami</a>
           </div>
         </div>
-  </nav>
+      </nav>
 
-  <!-- Main Content -->
-  <main class="flex-1 flex flex-col h-full overflow-hidden relative">
 
-      <!-- Main Content Area -->
-      <main
-        class="flex-1 flex flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark relative"
-      >
-        <!-- Content Scroll Area -->
-        <div class="flex-1 overflow-y-auto">
-          <div
-            class="container mx-auto max-w-6xl px-6 py-8 flex flex-col gap-8"
-          >
-            <!-- Page Heading -->
-            <div
-              class="flex flex-col md:flex-row md:items-center justify-between gap-4"
-            >
-              <div class="flex flex-col gap-1">
-                <h2
-                  class="text-slate-900 dark:text-white text-3xl font-black tracking-tight"
-                >
-                  Budgeting
-                </h2>
-                <p class="text-secondary dark:text-slate-400 text-base">
-                  Track your monthly spending limits and savings
-                </p>
+      <!-- Main Content -->
+      <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark relative">
+          <!-- Content Scroll Area -->
+          <div class="flex-1 overflow-y-auto">
+            <div class="container mx-auto max-w-6xl px-6 py-8 flex flex-col gap-8">
+              <!-- Page Heading -->
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-slate-900 dark:text-white text-3xl font-black tracking-tight">
+                    Pengelolaan Anggaran
+                  </h2>
+                  <p class="text-secondary dark:text-slate-400 text-base">
+                    Pantau batas pengeluaran dan tabungan bulanan Anda
+                  </p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <!-- Pemilih Bulan -->
+                  <button
+                    class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-card-dark border border-border-light dark:border-border-dark rounded-lg shadow-sm text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+                    <span>Oktober 2023</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+                  </button>
+                  <!-- Aksi Utama -->
+                  <button
+                    class="flex items-center justify-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-light text-white text-sm font-bold rounded-lg shadow-md transition-all active:scale-95">
+                    <span class="material-symbols-outlined text-[20px]">add</span>
+                    <span>Tambah Anggaran Baru</span>
+                  </button>
+                </div>
               </div>
-              <div class="flex items-center gap-3">
-                <!-- Month Selector -->
-                <button
-                  class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-card-dark border border-border-light dark:border-border-dark rounded-lg shadow-sm text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 transition-colors"
-                >
-                  <span class="material-symbols-outlined text-[20px]"
-                    >calendar_month</span
-                  >
-                  <span>October 2023</span>
-                  <span class="material-symbols-outlined text-[20px]"
-                    >arrow_drop_down</span
-                  >
-                </button>
-                <!-- Primary Action -->
-                <button
-                  class="flex items-center justify-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-light text-white text-sm font-bold rounded-lg shadow-md transition-all active:scale-95"
-                >
-                  <span class="material-symbols-outlined text-[20px]">add</span>
-                  <span>Add New Budget</span>
-                </button>
-              </div>
-            </div>
-            <!-- Stats Overview -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <!-- Card 1 -->
-              <div
-                class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-3 group hover:border-primary/30 transition-colors"
-              >
-                <div class="flex justify-between items-start">
-                  <div class="flex flex-col gap-1">
-                    <p
-                      class="text-secondary dark:text-slate-400 text-sm font-medium uppercase tracking-wide"
-                    >
-                      Total Budget
-                    </p>
-                    <p
-                      class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight"
-                    >
-                      $5,000.00
-                    </p>
+
+              <!-- Stats Overview -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div
+                  class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-3 group hover:border-primary/30 transition-colors">
+                  <div class="flex justify-between items-start">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-secondary dark:text-slate-400 text-sm font-medium uppercase tracking-wide">
+                        Total Anggaran
+                      </p>
+                      <p class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight">
+                        Rp5.000.000
+                      </p>
+                    </div>
+                    <div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary dark:text-blue-300">
+                      <span class="material-symbols-outlined">account_balance_wallet</span>
+                    </div>
                   </div>
+                  <div class="flex items-center gap-1 text-sm">
+                    <span class="text-secondary dark:text-slate-500">Batas bulanan tetap</span>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                  class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-3 group hover:border-primary/30 transition-colors">
+                  <div class="flex justify-between items-start">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-secondary dark:text-slate-400 text-sm font-medium uppercase tracking-wide">
+                        Total Pengeluaran
+                      </p>
+                      <p class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight">
+                        Rp 2.100.000
+                      </p>
+                    </div>
+                    <div class="p-2 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-orange-600 dark:text-orange-300">
+                      <span class="material-symbols-outlined">credit_card</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-1 text-sm font-medium text-orange-600 dark:text-orange-400">
+                    <span class="material-symbols-outlined text-[16px]">
+                      trending_up
+                    </span>
+                    <span>Naik 12% dibanding bulan lalu</span>
+                  </div>
+                </div>
+
+
+                <!-- Card 3 -->
+                <div
+                  class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-3 group hover:border-primary/30 transition-colors">
+                  <div class="flex justify-between items-start">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-secondary dark:text-slate-400 text-sm font-medium uppercase tracking-wide">
+                        Sisa Anggaran
+                      </p>
+                      <p class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight">
+                        Rp2.900.000
+                      </p>
+                    </div>
+                    <div
+                      class="p-2 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg text-accent-green dark:text-emerald-300">
+                      <span class="material-symbols-outlined">savings</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-1 text-sm font-medium text-accent-green">
+                    <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                    <span>Keuangan Anda terkendali</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Categories Section -->
+              <div class="flex flex-col gap-6">
+                <div
+                  class="flex items-center justify-between border-b border-border-light dark:border-border-dark pb-4">
+                  <h3 class="text-slate-900 dark:text-white text-lg font-bold tracking-tight">
+                    Rincian Kategori
+                  </h3>
+                  <button class="text-primary text-sm font-semibold hover:underline">
+                    Lihat Semua Kategori
+                  </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  <!-- 1. Hunian -->
                   <div
-                    class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary dark:text-blue-300"
-                  >
-                    <span class="material-symbols-outlined"
-                      >account_balance_wallet</span
-                    >
+                    class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5">
+                    <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                          <span class="material-symbols-outlined">home</span>
+                        </div>
+                        <div>
+                          <p class="font-bold text-slate-900 dark:text-white">Hunian</p>
+                          <p class="text-xs text-secondary">Sewa & Tagihan</p>
+                        </div>
+                      </div>
+                      <span class="px-2 py-1 text-xs font-bold bg-red-100 text-red-700 rounded-md">90%</span>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span>Rp 27.000.000 terpakai</span>
+                        <span class="text-secondary">Rp 30.000.000</span>
+                      </div>
+                      <div class="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-red-500" style="width:90%"></div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="flex items-center gap-1 text-sm">
-                  <span class="text-secondary dark:text-slate-500"
-                    >Fixed monthly limit</span
-                  >
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div
-                class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-3 group hover:border-primary/30 transition-colors"
-              >
-                <div class="flex justify-between items-start">
-                  <div class="flex flex-col gap-1">
-                    <p
-                      class="text-secondary dark:text-slate-400 text-sm font-medium uppercase tracking-wide"
-                    >
-                      Total Spent
-                    </p>
-                    <p
-                      class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight"
-                    >
-                      $2,100.00
-                    </p>
-                  </div>
+
+                  <!-- 2. Belanja Harian -->
                   <div
-                    class="p-2 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-orange-600 dark:text-orange-300"
-                  >
-                    <span class="material-symbols-outlined">credit_card</span>
+                    class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5">
+                    <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                          <span class="material-symbols-outlined">shopping_cart</span>
+                        </div>
+                        <div>
+                          <p class="font-bold">Belanja Harian</p>
+                          <p class="text-xs text-secondary">Makan & Kebutuhan</p>
+                        </div>
+                      </div>
+                      <span class="px-2 py-1 text-xs font-bold bg-emerald-100 text-emerald-700 rounded-md">40%</span>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span>Rp 3.000.000 terpakai</span>
+                        <span class="text-secondary">Rp 7.500.000</span>
+                      </div>
+                      <div class="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-emerald-500" style="width:40%"></div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="flex items-center gap-1 text-sm font-medium text-orange-600 dark:text-orange-400"
-                >
-                  <span class="material-symbols-outlined text-[16px]"
-                    >trending_up</span
-                  >
-                  <span>12% more than last month</span>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div
-                class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-sm border border-border-light dark:border-border-dark flex flex-col gap-3 group hover:border-primary/30 transition-colors"
-              >
-                <div class="flex justify-between items-start">
-                  <div class="flex flex-col gap-1">
-                    <p
-                      class="text-secondary dark:text-slate-400 text-sm font-medium uppercase tracking-wide"
-                    >
-                      Remaining
-                    </p>
-                    <p
-                      class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight"
-                    >
-                      $2,900.00
-                    </p>
-                  </div>
+
+                  <!-- 3. Transportasi -->
                   <div
-                    class="p-2 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg text-accent-green dark:text-emerald-300"
-                  >
-                    <span class="material-symbols-outlined">savings</span>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center gap-1 text-sm font-medium text-accent-green"
-                >
-                  <span class="material-symbols-outlined text-[16px]"
-                    >check_circle</span
-                  >
-                  <span>You are on track</span>
-                </div>
-              </div>
-            </div>
-            <!-- Categories Section -->
-            <div class="flex flex-col gap-6">
-              <div
-                class="flex items-center justify-between border-b border-border-light dark:border-border-dark pb-4"
-              >
-                <h3
-                  class="text-slate-900 dark:text-white text-lg font-bold tracking-tight"
-                >
-                  Category Breakdown
-                </h3>
-                <button
-                  class="text-primary text-sm font-semibold hover:underline"
-                >
-                  View All Categories
-                </button>
-              </div>
-              <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                <!-- Housing Budget -->
-                <div
-                  class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5"
-                >
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300"
-                      >
-                        <span class="material-symbols-outlined">home</span>
+                    class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5">
+                    <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                          <span class="material-symbols-outlined">directions_car</span>
+                        </div>
+                        <div>
+                          <p class="font-bold">Transportasi</p>
+                          <p class="text-xs text-secondary">BBM & Umum</p>
+                        </div>
                       </div>
-                      <div>
-                        <p class="text-slate-900 dark:text-white font-bold">
-                          Housing
-                        </p>
-                        <p class="text-secondary dark:text-slate-500 text-xs">
-                          Monthly Rent &amp; Bills
-                        </p>
+                      <span class="px-2 py-1 text-xs font-bold bg-blue-100 text-blue-700 rounded-md">50%</span>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span>Rp 2.250.000 terpakai</span>
+                        <span class="text-secondary">Rp 4.500.000</span>
+                      </div>
+                      <div class="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-blue-500" style="width:50%"></div>
                       </div>
                     </div>
-                    <span
-                      class="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 text-xs font-bold rounded-md"
-                      >90%</span
-                    >
                   </div>
-                  <div class="flex flex-col gap-2">
-                    <div class="flex justify-between text-sm font-medium">
-                      <span class="text-slate-900 dark:text-white"
-                        >$1,800
-                        <span
-                          class="text-secondary dark:text-slate-500 font-normal"
-                          >spent</span
-                        ></span
-                      >
-                      <span class="text-secondary dark:text-slate-500"
-                        >of $2,000</span
-                      >
-                    </div>
-                    <div
-                      class="h-2.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
-                    >
-                      <div
-                        class="h-full bg-red-500 rounded-full"
-                        style="width: 90%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Groceries Budget -->
-                <div
-                  class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5"
-                >
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300"
-                      >
-                        <span class="material-symbols-outlined"
-                          >shopping_cart</span
-                        >
+
+                  <!-- 4. Hiburan -->
+                  <div
+                    class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5">
+                    <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                          <span class="material-symbols-outlined">sports_esports</span>
+                        </div>
+                        <div>
+                          <p class="font-bold">Hiburan</p>
+                          <p class="text-xs text-secondary">Film & Game</p>
+                        </div>
                       </div>
-                      <div>
-                        <p class="text-slate-900 dark:text-white font-bold">
-                          Groceries
-                        </p>
-                        <p class="text-secondary dark:text-slate-500 text-xs">
-                          Food &amp; Supplies
-                        </p>
+                      <span class="px-2 py-1 text-xs font-bold bg-purple-100 text-purple-700 rounded-md">60%</span>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span>Rp 1.800.000 terpakai</span>
+                        <span class="text-secondary">Rp 3.000.000</span>
+                      </div>
+                      <div class="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-purple-500" style="width:60%"></div>
                       </div>
                     </div>
-                    <span
-                      class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-accent-green dark:text-emerald-300 text-xs font-bold rounded-md"
-                      >40%</span
-                    >
                   </div>
-                  <div class="flex flex-col gap-2">
-                    <div class="flex justify-between text-sm font-medium">
-                      <span class="text-slate-900 dark:text-white"
-                        >$200
-                        <span
-                          class="text-secondary dark:text-slate-500 font-normal"
-                          >spent</span
-                        ></span
-                      >
-                      <span class="text-secondary dark:text-slate-500"
-                        >of $500</span
-                      >
-                    </div>
-                    <div
-                      class="h-2.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
-                    >
-                      <div
-                        class="h-full bg-accent-green rounded-full"
-                        style="width: 40%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Transportation Budget -->
-                <div
-                  class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5"
-                >
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300"
-                      >
-                        <span class="material-symbols-outlined"
-                          >directions_car</span
-                        >
+
+                  <!-- 5. Kesehatan -->
+                  <div
+                    class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5">
+                    <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                          <span class="material-symbols-outlined">local_hospital</span>
+                        </div>
+                        <div>
+                          <p class="font-bold">Kesehatan</p>
+                          <p class="text-xs text-secondary">Obat & Klinik</p>
+                        </div>
                       </div>
-                      <div>
-                        <p class="text-slate-900 dark:text-white font-bold">
-                          Transportation
-                        </p>
-                        <p class="text-secondary dark:text-slate-500 text-xs">
-                          Fuel &amp; Transit
-                        </p>
+                      <span class="px-2 py-1 text-xs font-bold bg-pink-100 text-pink-700 rounded-md">30%</span>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span>Rp 900.000 terpakai</span>
+                        <span class="text-secondary">Rp 3.000.000</span>
+                      </div>
+                      <div class="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-pink-500" style="width:30%"></div>
                       </div>
                     </div>
-                    <span
-                      class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold rounded-md"
-                      >50%</span
-                    >
                   </div>
-                  <div class="flex flex-col gap-2">
-                    <div class="flex justify-between text-sm font-medium">
-                      <span class="text-slate-900 dark:text-white"
-                        >$150
-                        <span
-                          class="text-secondary dark:text-slate-500 font-normal"
-                          >spent</span
-                        ></span
-                      >
-                      <span class="text-secondary dark:text-slate-500"
-                        >of $300</span
-                      >
-                    </div>
-                    <div
-                      class="h-2.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
-                    >
-                      <div
-                        class="h-full bg-blue-600 rounded-full"
-                        style="width: 50%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Entertainment Budget -->
-                <div
-                  class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5"
-                >
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300"
-                      >
-                        <span class="material-symbols-outlined">movie</span>
+
+                  <!-- 6. Pendidikan -->
+                  <div
+                    class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5">
+                    <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                          <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <div>
+                          <p class="font-bold">Pendidikan</p>
+                          <p class="text-xs text-secondary">Kursus & Buku</p>
+                        </div>
                       </div>
-                      <div>
-                        <p class="text-slate-900 dark:text-white font-bold">
-                          Entertainment
-                        </p>
-                        <p class="text-secondary dark:text-slate-500 text-xs">
-                          Movies &amp; Games
-                        </p>
+                      <span class="px-2 py-1 text-xs font-bold bg-yellow-100 text-yellow-700 rounded-md">70%</span>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span>Rp 3.500.000 terpakai</span>
+                        <span class="text-secondary">Rp 5.000.000</span>
                       </div>
-                    </div>
-                    <span
-                      class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-accent-green dark:text-emerald-300 text-xs font-bold rounded-md"
-                      >10%</span
-                    >
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <div class="flex justify-between text-sm font-medium">
-                      <span class="text-slate-900 dark:text-white"
-                        >$50
-                        <span
-                          class="text-secondary dark:text-slate-500 font-normal"
-                          >spent</span
-                        ></span
-                      >
-                      <span class="text-secondary dark:text-slate-500"
-                        >of $500</span
-                      >
-                    </div>
-                    <div
-                      class="h-2.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
-                    >
-                      <div
-                        class="h-full bg-accent-green rounded-full"
-                        style="width: 10%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Utilities Budget -->
-                <div
-                  class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5"
-                >
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300"
-                      >
-                        <span class="material-symbols-outlined">bolt</span>
+                      <div class="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-yellow-500" style="width:70%"></div>
                       </div>
-                      <div>
-                        <p class="text-slate-900 dark:text-white font-bold">
-                          Utilities
-                        </p>
-                        <p class="text-secondary dark:text-slate-500 text-xs">
-                          Electric &amp; Water
-                        </p>
-                      </div>
-                    </div>
-                    <span
-                      class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 text-xs font-bold rounded-md"
-                      >75%</span
-                    >
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <div class="flex justify-between text-sm font-medium">
-                      <span class="text-slate-900 dark:text-white"
-                        >$150
-                        <span
-                          class="text-secondary dark:text-slate-500 font-normal"
-                          >spent</span
-                        ></span
-                      >
-                      <span class="text-secondary dark:text-slate-500"
-                        >of $200</span
-                      >
-                    </div>
-                    <div
-                      class="h-2.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
-                    >
-                      <div
-                        class="h-full bg-yellow-500 rounded-full"
-                        style="width: 75%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Dining Out Budget -->
-                <div
-                  class="bg-card-light dark:bg-card-dark p-5 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-5 opacity-90"
-                >
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-3">
-                      <div
-                        class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300"
-                      >
-                        <span class="material-symbols-outlined"
-                          >restaurant</span
-                        >
-                      </div>
-                      <div>
-                        <p class="text-slate-900 dark:text-white font-bold">
-                          Dining Out
-                        </p>
-                        <p class="text-secondary dark:text-slate-500 text-xs">
-                          Restaurants &amp; Cafes
-                        </p>
-                      </div>
-                    </div>
-                    <span
-                      class="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 text-xs font-bold rounded-md"
-                      >100%</span
-                    >
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <div class="flex justify-between text-sm font-medium">
-                      <span class="text-slate-900 dark:text-white"
-                        >$200
-                        <span
-                          class="text-secondary dark:text-slate-500 font-normal"
-                          >spent</span
-                        ></span
-                      >
-                      <span class="text-secondary dark:text-slate-500"
-                        >of $200</span
-                      >
-                    </div>
-                    <div
-                      class="h-2.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
-                    >
-                      <div
-                        class="h-full bg-red-600 rounded-full"
-                        style="width: 100%"
-                      ></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
+        </main>
     </div>
-  </body>
-    <script>
-    const hamburger = document.getElementById("hamburgerBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+</body>
+<script>
+  const hamburger = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("opacity-0");
-      mobileMenu.classList.toggle("scale-95");
-      mobileMenu.classList.toggle("pointer-events-none");
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("opacity-0");
+    mobileMenu.classList.toggle("scale-95");
+    mobileMenu.classList.toggle("pointer-events-none");
 
-      hamburger.classList.toggle("active");
-    });
+    hamburger.classList.toggle("active");
+  });
 
-    // Close menu when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
-      }
-    });
-  </script>
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+    }
+  });
+</script>
 
-  <script src="../assets/app.js"></script>
-  <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+<script src="../assets/app.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
 </html>
