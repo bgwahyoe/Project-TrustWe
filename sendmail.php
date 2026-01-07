@@ -11,7 +11,7 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'mail.trustwe.my.id';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'admin@trustwe.my.id';
+    $mail->Username   = 'admin';
     $mail->Password   = 'bismillah';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
