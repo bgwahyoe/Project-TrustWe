@@ -8,16 +8,22 @@ $mail = new PHPMailer(true);
 
 try {
 
+    $mail->SMTPDebug = 2;
+    $mail->Debugoutput = 'html';
     $mail->isSMTP();
     $mail->Host       = 'mail.trustwe.my.id';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'admin';
+    $mail->Username   = 'admin@trustwe.my.id';
     $mail->Password   = 'bismillah';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
+    $mail->AuthType   = 'LOGIN';
+    $mail->SMTPAutoTLS = true;
+
 
     $mail->setFrom('admin@trustwe.my.id', 'TrustWe Website');
     $mail->addAddress('admin@trustwe.my.id');
+    $mail->addReplyTo($_POST['Email'] ?? 'admin@trustwe.my.id');
 
     $mail->Subject = "Pesan dari Website TrustWe";
 
