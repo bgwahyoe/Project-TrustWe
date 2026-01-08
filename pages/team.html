@@ -351,7 +351,7 @@
                     </p>
                 </div>
 
-                <form action="/sendmail.php" method="POST">
+                <form id="contactForm" method="POST">
                     <!-- Nama -->
                     <div>
                         <label class="block text-sm font-medium mb-2">Nama Lengkap</label>
@@ -411,6 +411,10 @@
         </section>
 
     </div>
+    </div>
+    <div id="notif" class="hidden fixed top-6 right-6 z-[9999] px-5 py-4 rounded-xl text-white font-semibold shadow-2xl
+  transition-all duration-300">
+    </div>
 
 </body>
 <script>
@@ -431,6 +435,46 @@
             mobileMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
         }
     });
+    const form = document.getElementById("contactForm");
+    const notif = document.getElementById("notif");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        let formData = new FormData(form);
+
+        let res = await fetch("/sendmail.php", {
+            method: "POST",
+            body: formData
+        });
+
+        let text = await res.text();
+
+        if (text.includes("berhasil")) {
+            showNotif("Pesan berhasil dikirim 🎉", "success");
+            form.reset();
+        } else {
+            showNotif("Gagal mengirim pesan 😥", "error");
+        }
+    });
+
+    function showNotif(message, type) {
+
+        notif.innerText = message;
+
+        notif.className =
+            "fixed top-6 right-6 z-[9999] px-5 py-4 rounded-xl text-white font-semibold shadow-2xl transition-all duration-300";
+
+        if (type === "success") notif.classList.add("bg-emerald-500");
+        else notif.classList.add("bg-red-500");
+
+        notif.classList.remove("hidden");
+
+        setTimeout(() => {
+            notif.classList.add("hidden");
+        }, 4000);
+    }
+
 </script>
 
 </html>
