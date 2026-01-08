@@ -10,15 +10,17 @@ try {
 
     $mail->SMTPDebug = 2;
     $mail->Debugoutput = 'html';
+    
     $mail->isSMTP();
     $mail->Host       = 'mail.trustwe.my.id';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'admin@trustwe.my.id';
     $mail->Password   = 'bismillah';
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+    $mail->SMTPSecure = 'tls';
     $mail->AuthType   = 'LOGIN';
+    $mail->Port       = 587;
     $mail->SMTPAutoTLS = true;
+    $mail->AuthType   = 'PLAIN';
 
 
     $mail->setFrom('admin@trustwe.my.id', 'TrustWe Website');
