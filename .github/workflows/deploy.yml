@@ -23,11 +23,17 @@ jobs:
 
             cd ~/trustwe
 
-            echo "📥 Update source code"
-            git pull origin main
+            echo "📥 Force update source code"
+            git fetch origin
+            git reset --hard origin/main
 
-            echo "🐳 Build & run container"
-            docker compose build
+            echo "🛑 Stop container lama"
+            docker compose down
+
+            echo "🐳 Build ulang TANPA cache"
+            docker compose build --no-cache
+
+            echo "▶️ Jalankan container baru"
             docker compose up -d
 
             echo "🧹 Cleanup image lama"
